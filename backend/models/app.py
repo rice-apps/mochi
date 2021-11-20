@@ -56,6 +56,12 @@ def create_tables():
     return user1.id
 
 
+@app.route('/<username>/events/')
+def upcoming_events(username):
+    user = get_object_or_404(User, User.name == username)
+    events = Event.get_events(user.id)
+    return object_list('upcoming_events.html', events, 'upcoming_events', user=user)
+
+
 if __name__ == "__main__":
     user_id = create_tables()
-    Event.get_events(user_id)
