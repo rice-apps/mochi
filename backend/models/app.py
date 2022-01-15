@@ -1,9 +1,11 @@
 import datetime
+
 from peewee import *
 from playhouse.postgres_ext import *
 
-pg_db = PostgresqlExtDatabase(
-    'mochi', user='postgres', password='postgres', port=5432)
+from ..server import app
+
+pg_db = PostgresqlExtDatabase("mochi", user="postgres", password="postgres", port=5432)
 
 
 class BaseModel(Model):
@@ -25,30 +27,40 @@ class Event(BaseModel):
     timestamp = DateTimeField(default=datetime.datetime.now)
 
     def get_events(user_id):
-        events = (Event
-                  .select()
-                  .where(Event.timestamp > datetime.datetime.now())
-                  .join(UserEvent)
-                  .join(User)
-                  .where(User.id == user_id)
-                  .order_by(Event.timestamp))
+        events = (
+            Event.select()
+            .where(Event.timestamp > datetime.datetime.now())
+            .join(UserEvent)
+            .join(User)
+            .where(User.id == user_id)
+            .order_by(Event.timestamp)
+        )
 
         for event in events:
             print(event.description)
 
 
 class UserEvent(BaseModel):
-    user = ForeignKeyField(User, backref='user_events')
-    event = ForeignKeyField(Event, backref='event_users')
+    user = ForeignKeyField(User, backref="user_events")
+    event = ForeignKeyField(Event, backref="event_users")
 
 
 def create_tables():
     pg_db.create_tables([User, Event, UserEvent], safe=True)
 
-    user1 = User.create(name="Rajesh", college="brown", year="2023",
-                        major="Computer Science", interests=["Coding", "Rock Climbing"])
-    event1 = Event.create(location="Fondy", description="Our first event",
-                          timestamp=datetime.date.today() + datetime.timedelta(days=1), users=[user1])
+    user1 = User.create(
+        name="Rajesh",
+        college="brown",
+        year="2023",
+        major="Computer Science",
+        interests=["Coding", "Rock Climbing"],
+    )
+    event1 = Event.create(
+        location="Fondy",
+        description="Our first event",
+        timestamp=datetime.date.today() + datetime.timedelta(days=1),
+        users=[user1],
+    )
 
     UserEvent.create(user=user1, event=event1)
 
@@ -56,11 +68,11 @@ def create_tables():
     return user1.id
 
 
-@app.route('/<username>/events/')
+@app.route("/<username>/events/")
 def upcoming_events(username):
     user = get_object_or_404(User, User.name == username)
     events = Event.get_events(user.id)
-    return object_list('upcoming_events.html', events, 'upcoming_events', user=user)
+    return object_list("upcoming_events.html", events, "upcoming_events", user=user)
 
 
 if __name__ == "__main__":

@@ -1,8 +1,10 @@
-from flask import Flask
-import psycopg2
 import json
 
+import psycopg2
+from flask import Flask
+
 app = Flask(__name__)
+
 
 def list_to_json(lst):
     res = {}
@@ -13,33 +15,49 @@ def list_to_json(lst):
         res["users"].append(res_dict)
     return json.dumps(res)
 
+
 @app.route("/hello/")
 def hello_world():
     return "Hello, world!\n"
 
+
 @app.route("/users/")
 def get_users():
-    conn = psycopg2.connect(host="localhost", database="postgres", user="postgres", port = "3142", password="edmondkirsch3142")
+    conn = psycopg2.connect(
+        host="localhost",
+        database="postgres",
+        user="postgres",
+        port="3142",
+        password="edmondkirsch3142",
+    )
     cur = conn.cursor()
     cur.execute("SELECT * FROM users;")
     return list_to_json(cur.fetchall())
 
+
 @app.route("/users/<netid>/")
 def get_user(netid):
-    conn = psycopg2.connect(host="localhost", database="postgres", user="postgres", port = "3142", password="")
+    conn = psycopg2.connect(
+        host="localhost", database="postgres", user="postgres", port="3142", password=""
+    )
     cur = conn.cursor()
     cur.execute("SELECT * FROM users WHERE netid = '" + str(netid) + "';")
     return list_to_json(cur.fetchall())
 
+
 @app.route("/users/<netid>/")
 def get_user(netid):
-    conn = psycopg2.connect(host="localhost", database="postgres", user="postgres", port = "3142", password="")
+    conn = psycopg2.connect(
+        host="localhost", database="postgres", user="postgres", port="3142", password=""
+    )
     cur = conn.cursor()
     cur.execute("SELECT * FROM users WHERE netid = '" + str(netid) + "';")
     return list_to_json(cur.fetchall())
+
 
 @app.route("/create_user/<netid>/<name>/<major>")
 def create_user(netid, name, major):
-    conn = psycopg2.connect(host="localhost", database="postgres", user="postgres", port = "3142", password="")
+    conn = psycopg2.connect(
+        host="localhost", database="postgres", user="postgres", port="3142", password=""
+    )
     cur = conn.cursor()
-
