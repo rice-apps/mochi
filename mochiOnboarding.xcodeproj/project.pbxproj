@@ -13,6 +13,7 @@
 		439535BF27AEFA8600D4E4CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439535BD27AEFA8600D4E4CB /* Main.storyboard */; };
 		439535C127AEFA8800D4E4CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439535C027AEFA8800D4E4CB /* Assets.xcassets */; };
 		439535C427AEFA8800D4E4CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439535C227AEFA8800D4E4CB /* LaunchScreen.storyboard */; };
+		439535CC27AF0CB100D4E4CB /* QuestionOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		439535C027AEFA8800D4E4CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		439535C327AEFA8800D4E4CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		439535C527AEFA8800D4E4CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		439535AB27AEFA8600D4E4CB = {
 			isa = PBXGroup;
 			children = (
+				439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */,
 				439535B627AEFA8600D4E4CB /* mochiOnboarding */,
 				439535B527AEFA8600D4E4CB /* Products */,
 			);
@@ -141,6 +144,7 @@
 				439535BC27AEFA8600D4E4CB /* ViewController.swift in Sources */,
 				439535B827AEFA8600D4E4CB /* AppDelegate.swift in Sources */,
 				439535BA27AEFA8600D4E4CB /* SceneDelegate.swift in Sources */,
+				439535CC27AF0CB100D4E4CB /* QuestionOneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
