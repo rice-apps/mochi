@@ -42,7 +42,6 @@
 		439535AB27AEFA8600D4E4CB = {
 			isa = PBXGroup;
 			children = (
-				439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */,
 				439535B627AEFA8600D4E4CB /* mochiOnboarding */,
 				439535B527AEFA8600D4E4CB /* Products */,
 			);
@@ -62,6 +61,7 @@
 				439535B727AEFA8600D4E4CB /* AppDelegate.swift */,
 				439535B927AEFA8600D4E4CB /* SceneDelegate.swift */,
 				439535BB27AEFA8600D4E4CB /* ViewController.swift */,
+				439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */,
 				439535BD27AEFA8600D4E4CB /* Main.storyboard */,
 				439535C027AEFA8800D4E4CB /* Assets.xcassets */,
 				439535C227AEFA8800D4E4CB /* LaunchScreen.storyboard */,
