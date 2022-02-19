@@ -94,6 +94,21 @@ def add_interests(netid):
         return True
     except:
         return False
+    
+@app.route("confirm_attendance/<netid>/<eventid>/", methods=['POST'])
+def confirm_attendancce(netid, eventid):
+    try:
+        attendance_json = request.json
+        attendance_data = json.loads(attendance_json)
+        if attendance_data == False:
+            User = User.select().where(User.netid == netid)
+            Event = Event.select().where(Event.id == eventid)
+            deletedEvent = UserEvent.select().where(UserEvent.user == User, UserEvent.event == Event)
+            qry = UserEvent.delete().where(UserEvent == deletedEvent)
+            qry.execute()
+        return True
+    except:
+        return False
 
 if __name__ == "__main__":
     user_id = create_tables()
