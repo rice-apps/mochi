@@ -82,6 +82,7 @@ import UIKit
         self.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
 //        self.setTitle(deselectedText, for: .normal)
         self.setTitleColor(textColorDeselected, for: .normal)
+        self.tintColor = .black
     }
 
 }
