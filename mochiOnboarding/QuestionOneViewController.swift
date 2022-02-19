@@ -15,7 +15,7 @@ import UIKit
     @IBInspectable var borderColorDeselected:UIColor = UIColor.black
     
     @IBInspectable var borderWidth:CGFloat = 3
-    @IBInspectable var cornerRadius:CGFloat = 15
+    @IBInspectable var cornerRadius:CGFloat = 12
     
 //    // The text that's shown in each state
 //    @IBInspectable var selectedText:String = "Selected"
@@ -35,6 +35,7 @@ import UIKit
         
         // Setup CAShape Layer (Dashed/Solid Border)
         border.lineWidth = borderWidth
+        border.cornerCurve = .continuous
         border.frame = self.bounds
         border.fillColor = nil
         border.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: cornerRadius).cgPath
@@ -71,6 +72,7 @@ import UIKit
         self.backgroundColor = .black
 //        self.setTitle(selectedText, for: .normal)
         self.setTitleColor(textColorSelected, for: .normal)
+        self.tintColor = .white
     }
     
     // Set the deselcted properties

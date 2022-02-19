@@ -42,6 +42,10 @@
                                     <segue destination="yHe-Ow-49a" kind="show" id="jVW-5s-F9N"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="DBZ-HE-j04">
+                                <rect key="frame" x="0.0" y="172" width="398.5" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,74 +73,86 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuS-E5-bfY" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="49" y="306" width="74" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuS-E5-bfY" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="32" y="277" width="87" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="country"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuD-l5-sHL" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="146" y="365" width="90.5" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuD-l5-sHL" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="134" y="330" width="105" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="bollywood"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipb-K3-4lq" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="208" y="421" width="102" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipb-K3-4lq" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="175" y="383" width="121" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="heavy metal"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx9-Kd-ac3" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="131" y="421" width="53" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx9-Kd-ac3" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="102" y="383" width="65" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="edm"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkS-V4-owk" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="119" y="481" width="124" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkS-V4-owk" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="103" y="436" width="144" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="musical theatre"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCr-x2-rfc" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="54" y="421" width="50" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCr-x2-rfc" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="32" y="383" width="62" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="lo-fi"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJo-HQ-73F" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="54" y="481" width="53" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJo-HQ-73F" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="32" y="436" width="63" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="rock"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrO-KM-FlG" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="49" y="365" width="79" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrO-KM-FlG" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="32" y="330" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="classical"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9M-cl-0Kg" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="272.5" y="365" width="48" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9M-cl-0Kg" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="247" y="330" width="58" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="r&amp;b"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-hC-9RK" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="269" y="481" width="55" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-hC-9RK" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="255" y="436" width="67" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="indie"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc2-vw-1UX" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="131.5" y="306" width="63" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc2-vw-1UX" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="127" y="277" width="76" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="k-pop"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POO-Z6-n9H" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="208" y="306" width="52" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POO-Z6-n9H" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="211" y="277" width="64" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="latin"/>
@@ -153,28 +169,22 @@
                                     <segue destination="7s8-0m-EE5" kind="show" id="Xkb-hg-hp7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHl-7F-mKE" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="285" y="306" width="48" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHl-7F-mKE" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="283" y="277" width="58" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="flok"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VI-NI-yhG" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="285" y="242" width="50" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VI-NI-yhG" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="259" y="224" width="59" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="jazz"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVo-XP-bL4">
-                                <rect key="frame" x="119" y="782" width="73" height="31"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="hip hop"/>
-                                <connections>
-                                    <action selector="hipHopButtonClicked:" destination="yHe-Ow-49a" eventType="touchUpInside" id="FzQ-HF-om6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqO-RJ-RRJ" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="55" y="242" width="66" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqO-RJ-RRJ" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="32" y="224" width="60" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="pop"/>
                                 <userDefinedRuntimeAttributes>
@@ -183,8 +193,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upy-3H-a40" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
-                                <rect key="frame" x="146" y="242" width="49" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upy-3H-a40" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="100" y="224" width="57" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="rap"/>
                             </button>
@@ -195,54 +206,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paE-LU-fTS" customClass="SelectionButton" customModule="mochiOnboarding" customModuleProvider="target">
+                                <rect key="frame" x="165" y="224" width="86" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="hip hop"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fIh-kX-arG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" systemColor="labelColor"/>
-                        <constraints>
-                            <constraint firstItem="CqO-RJ-RRJ" firstAttribute="top" secondItem="upy-3H-a40" secondAttribute="top" id="5JC-rY-4Xe"/>
-                            <constraint firstItem="uuS-E5-bfY" firstAttribute="leading" secondItem="fIh-kX-arG" secondAttribute="leading" constant="49" id="7PY-8n-HEm"/>
-                            <constraint firstItem="wc2-vw-1UX" firstAttribute="baseline" secondItem="POO-Z6-n9H" secondAttribute="baseline" id="AA7-hf-JaV"/>
-                            <constraint firstItem="yx9-Kd-ac3" firstAttribute="leading" secondItem="vCr-x2-rfc" secondAttribute="trailing" constant="27" id="AXg-fP-Ii0"/>
-                            <constraint firstItem="o9M-cl-0Kg" firstAttribute="centerX" secondItem="Bhl-hC-9RK" secondAttribute="centerX" id="B2h-WG-11g"/>
-                            <constraint firstItem="RJo-HQ-73F" firstAttribute="baseline" secondItem="dkS-V4-owk" secondAttribute="baseline" id="B3e-OR-B1x"/>
-                            <constraint firstItem="o9M-cl-0Kg" firstAttribute="leading" secondItem="VuD-l5-sHL" secondAttribute="trailing" constant="36" id="Bxa-AJ-jij"/>
-                            <constraint firstItem="dkS-V4-owk" firstAttribute="baseline" secondItem="Bhl-hC-9RK" secondAttribute="baseline" id="CtR-cc-ps1"/>
-                            <constraint firstItem="gHl-7F-mKE" firstAttribute="leading" secondItem="POO-Z6-n9H" secondAttribute="trailing" constant="25" id="D8b-dq-PVr"/>
-                            <constraint firstItem="POO-Z6-n9H" firstAttribute="baseline" secondItem="gHl-7F-mKE" secondAttribute="baseline" id="Dhp-dT-l9J"/>
-                            <constraint firstItem="6VI-NI-yhG" firstAttribute="leading" secondItem="gHl-7F-mKE" secondAttribute="leading" id="FJ5-fZ-J05"/>
-                            <constraint firstItem="Bhl-hC-9RK" firstAttribute="leading" secondItem="dkS-V4-owk" secondAttribute="trailing" constant="26" id="HJR-ix-fE7"/>
-                            <constraint firstItem="uuS-E5-bfY" firstAttribute="leading" secondItem="HrO-KM-FlG" secondAttribute="leading" id="Hhs-JC-6b9"/>
-                            <constraint firstItem="yx9-Kd-ac3" firstAttribute="baseline" secondItem="ipb-K3-4lq" secondAttribute="baseline" id="IQ2-AJ-mzr"/>
-                            <constraint firstItem="wc2-vw-1UX" firstAttribute="top" secondItem="upy-3H-a40" secondAttribute="bottom" constant="29" id="MX9-HO-617"/>
-                            <constraint firstItem="wc2-vw-1UX" firstAttribute="leading" secondItem="uuS-E5-bfY" secondAttribute="trailing" constant="8.5" id="MgT-2G-IAU"/>
-                            <constraint firstItem="lVo-XP-bL4" firstAttribute="baseline" secondItem="6VI-NI-yhG" secondAttribute="baseline" constant="540" id="NR1-4b-IPS"/>
-                            <constraint firstItem="vCr-x2-rfc" firstAttribute="baseline" secondItem="yx9-Kd-ac3" secondAttribute="baseline" id="NvU-51-vNb"/>
-                            <constraint firstItem="vCr-x2-rfc" firstAttribute="leading" secondItem="RJo-HQ-73F" secondAttribute="leading" id="PC6-tg-4Ua"/>
-                            <constraint firstItem="ipb-K3-4lq" firstAttribute="leading" secondItem="yx9-Kd-ac3" secondAttribute="trailing" constant="24" id="PET-wd-HbH"/>
-                            <constraint firstItem="HrO-KM-FlG" firstAttribute="baseline" secondItem="VuD-l5-sHL" secondAttribute="baseline" id="QnO-nr-FRF"/>
-                            <constraint firstItem="CqO-RJ-RRJ" firstAttribute="leading" secondItem="fIh-kX-arG" secondAttribute="leading" constant="55" id="QuP-d5-QkE"/>
-                            <constraint firstItem="CqO-RJ-RRJ" firstAttribute="top" secondItem="fIh-kX-arG" secondAttribute="top" constant="154" id="SJE-jH-P60"/>
-                            <constraint firstItem="wc2-vw-1UX" firstAttribute="baseline" secondItem="uuS-E5-bfY" secondAttribute="firstBaseline" id="V8B-fj-plK"/>
-                            <constraint firstItem="vCr-x2-rfc" firstAttribute="leading" secondItem="fIh-kX-arG" secondAttribute="leading" constant="54" id="WtT-0h-Cdy"/>
-                            <constraint firstItem="uuS-E5-bfY" firstAttribute="top" secondItem="CqO-RJ-RRJ" secondAttribute="bottom" constant="31" id="dNz-DZ-Wup"/>
-                            <constraint firstItem="uuS-E5-bfY" firstAttribute="baseline" secondItem="wc2-vw-1UX" secondAttribute="baseline" id="dad-VW-zAc"/>
-                            <constraint firstItem="dkS-V4-owk" firstAttribute="leading" secondItem="RJo-HQ-73F" secondAttribute="trailing" constant="12" id="dbz-xy-GHq"/>
-                            <constraint firstItem="POO-Z6-n9H" firstAttribute="baseline" secondItem="wc2-vw-1UX" secondAttribute="firstBaseline" id="eGk-9f-YvF"/>
-                            <constraint firstItem="vCr-x2-rfc" firstAttribute="top" secondItem="HrO-KM-FlG" secondAttribute="bottom" constant="25" id="esc-YI-GwR"/>
-                            <constraint firstItem="VuD-l5-sHL" firstAttribute="leading" secondItem="HrO-KM-FlG" secondAttribute="trailing" constant="18" id="fB9-pp-XfR"/>
-                            <constraint firstItem="VuD-l5-sHL" firstAttribute="baseline" secondItem="o9M-cl-0Kg" secondAttribute="baseline" id="h0B-GW-xlT"/>
-                            <constraint firstItem="6VI-NI-yhG" firstAttribute="leading" secondItem="upy-3H-a40" secondAttribute="trailing" constant="90" id="ih6-5z-o5K"/>
-                            <constraint firstItem="upy-3H-a40" firstAttribute="leading" secondItem="VuD-l5-sHL" secondAttribute="leading" id="jkR-0w-Ur7"/>
-                            <constraint firstItem="HrO-KM-FlG" firstAttribute="top" secondItem="uuS-E5-bfY" secondAttribute="bottom" constant="28" id="o44-Wg-aEh"/>
-                            <constraint firstItem="RJo-HQ-73F" firstAttribute="top" secondItem="vCr-x2-rfc" secondAttribute="bottom" constant="29" id="oGc-Jg-jT1"/>
-                            <constraint firstItem="6VI-NI-yhG" firstAttribute="leading" secondItem="lVo-XP-bL4" secondAttribute="trailing" constant="93" id="rFX-3P-OWg"/>
-                            <constraint firstItem="upy-3H-a40" firstAttribute="top" secondItem="6VI-NI-yhG" secondAttribute="top" id="tE7-Oz-gZC"/>
-                            <constraint firstItem="POO-Z6-n9H" firstAttribute="leading" secondItem="ipb-K3-4lq" secondAttribute="leading" id="tYd-Dc-vnn"/>
-                            <constraint firstItem="gHl-7F-mKE" firstAttribute="top" secondItem="6VI-NI-yhG" secondAttribute="bottom" constant="33" id="uWD-sU-Yh2"/>
-                            <constraint firstItem="dkS-V4-owk" firstAttribute="baseline" secondItem="Bhl-hC-9RK" secondAttribute="firstBaseline" id="y4H-e4-55b"/>
-                            <constraint firstItem="CqO-RJ-RRJ" firstAttribute="centerX" secondItem="HrO-KM-FlG" secondAttribute="centerX" id="yfI-dE-MQn"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d63-BL-ieG"/>
                     <connections>
@@ -280,6 +253,12 @@
                                 <connections>
                                     <segue destination="ZEn-Oa-pJv" kind="show" id="80b-k8-Og5"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VR5-ot-9HU">
+                                <rect key="frame" x="49" y="173" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SdY-FZ-Sqe"/>
@@ -433,6 +412,9 @@
         <designable name="o9M-cl-0Kg">
             <size key="intrinsicContentSize" width="47.5" height="31"/>
         </designable>
+        <designable name="paE-LU-fTS">
+            <size key="intrinsicContentSize" width="72.5" height="31"/>
+        </designable>
         <designable name="upy-3H-a40">
             <size key="intrinsicContentSize" width="45.5" height="31"/>
         </designable>
@@ -451,6 +433,7 @@
     </designables>
     <color key="tintColor" name="AccentColor"/>
     <resources>
+        <image name="onboarding" width="390" height="214"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
