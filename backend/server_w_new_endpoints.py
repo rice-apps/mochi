@@ -95,7 +95,10 @@ def add_interests(netid):
     try:
         interest_json = request.json
         interest_data = json.loads(interest_json)
-        qry = User.update({User.interests:interest_data}).where(User.netid == netid)
+        interests = User.get().where(User.netid == netid).interests
+        for interest in interest_data:
+            interests.append(interest)
+        qry = User.update({User.interests:interests}).where(User.netid == netid)
         qry.execute()
         return True
     except:
@@ -127,6 +130,16 @@ def get_attendance(eventid):
             'netid': UserEvent.user.netid,
             'user': UserEvent.user.name})
     return str(json.dumps(attendees))
+
+@app.route("login_profile/<netid>/", methods=['GET'])
+def login_profile(netid):
+    user = User.get().where(User.netid == netid)
+    return str(json.dump(
+        {'netid': user.netid, 
+        'name': user.name,
+        'college': user.college,
+        'year': user.year}))
+
 
 if __name__ == "__main__":
     user_id = create_tables()
