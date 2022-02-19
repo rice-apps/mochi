@@ -80,10 +80,15 @@ def create_tables():
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 """
 
-
 @app.route("/join_event/<netid>/<eventid>/", methods=['POST'])
 def join_events(netid, eventid):
-    event = Event.select().where(id=eventid).join(UserEvent).update()
+    try:
+        UserEvent.create(
+            user = User.select().where(User.netid == netid)
+            event = Event.select().where(Event.id == eventid)
+        )
+    except:
+        return False
 
 @app.route("add_interests/<netid>/", methods=['POST', 'GET'])
 def add_interests(netid):
@@ -91,10 +96,11 @@ def add_interests(netid):
         interest_json = request.json
         interest_data = json.loads(interest_json)
         qry = User.update({User.interests:interest_data}).where(User.netid == netid)
+        qry.execute()
         return True
     except:
         return False
-    
+
 @app.route("confirm_attendance/<netid>/<eventid>/", methods=['POST'])
 def confirm_attendancce(netid, eventid):
     try:
