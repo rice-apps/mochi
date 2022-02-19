@@ -1,6 +1,7 @@
 import json
 
 from flask import Flask
+from flask import request
 
 app = Flask(__name__)
 
@@ -86,18 +87,13 @@ def join_events(netid, eventid):
 
 @app.route("add_interests/<netid>/", methods=['POST', 'GET'])
 def add_interests(netid):
-    if request
-    list_of_interests = []
-    word = ""
-    for char in interests:
-        if char != ",":
-            word = word + char
-        else:
-            list_of_interests.append(word)
-            word = ""
-    list_of_interests.append(word)
-    old_interests = [user.username for user in User.select().where(User.id == netid).]
-    user = User.select().where(User.id == netid).update()
+    try:
+        interest_json = request.json
+        interest_data = json.loads(interest_json)
+        qry = User.update({User.interests:interest_data}).where(User.netid == netid)
+        return True
+    except:
+        return False
 
 if __name__ == "__main__":
     user_id = create_tables()
