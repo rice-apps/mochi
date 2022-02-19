@@ -87,6 +87,7 @@ def join_events(netid, eventid):
             user = User.select().where(User.netid == netid)
             event = Event.select().where(Event.id == eventid)
         )
+        return True
     except:
         return False
 
