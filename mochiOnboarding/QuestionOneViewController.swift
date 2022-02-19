@@ -14,7 +14,7 @@ import UIKit
     @IBInspectable var borderColorSelected:UIColor = UIColor.black
     @IBInspectable var borderColorDeselected:UIColor = UIColor.black
     
-    @IBInspectable var borderWidth:CGFloat = 4
+    @IBInspectable var borderWidth:CGFloat = 3
     @IBInspectable var cornerRadius:CGFloat = 15
     
 //    // The text that's shown in each state
@@ -76,7 +76,8 @@ import UIKit
     // Set the deselcted properties
     func setDeselected() {
         border.strokeColor = borderColorDeselected.cgColor
-        self.backgroundColor = .white
+        //self.backgroundColor = .white
+        self.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
 //        self.setTitle(deselectedText, for: .normal)
         self.setTitleColor(textColorDeselected, for: .normal)
     }
@@ -105,7 +106,10 @@ class myCustomButton: UIButton {
 class QuestionOneViewController: UIViewController {
 
     @IBOutlet weak var questionOne: UILabel!
-
+    @IBOutlet weak var continueOne: UIButton!
+    
+    @IBOutlet weak var pop: SelectionButton!
+    
 //    @IBAction func hipHopButtonClicked(_ sender: UIButton) {
 //        print("tapped")
 //        sender.backgroundColor = .black
@@ -124,20 +128,29 @@ class QuestionOneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.inputViewController?.modalPresentationStyle = .fullScreen
+        self.view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
 
         // Do any additional setup after loading the view.
         questionOne.text = "What are your favorite music genres?"
         questionOne.frame = CGRect(x: 32, y: 120, width: 326, height: 72)
-        //questionOne.backgroundColor = .white
-        //questionOne.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        questionOne.font = UIFont(name: "Poppins-SemiBold", size: 24)
+        //questionOne.font = UIFont(name: "Poppins-SemiBold", size: 24)
         questionOne.numberOfLines = 0
         questionOne.lineBreakMode = .byWordWrapping
         
-//        view.addSubview(popButton)
-//        popButton.layer.borderColor = UIColor.black.cgColor
-//
-//        popButton.addTarget(popButton, action:#selector(myCustomButton.buttonPressed), for: .touchUpInside)
+        continueOne.frame = CGRect(x: 219, y: 628, width: 139, height: 52)
+        continueOne.setTitleColor(.white, for: .normal)
+        continueOne.layer.backgroundColor = UIColor(red: 0.486, green: 0.165, blue: 0.906, alpha: 1).cgColor
+        continueOne.layer.cornerRadius = 5
+        continueOne.tintColor = .white
+        //continueOne.setTitle("Continue", for: .normal)
+        
+        pop.frame = CGRect(x: 32, y: 224, width: 60, height: 37)
+        pop.setTitleColor(.black, for: .normal)
+        //pop.layer.backgroundColor = UIColor(red: 0.486, green: 0.165, blue: 0.906, alpha: 1).cgColor
+        //pop.layer.cornerRadius = 5
+        //pop.tintColor = .white
+        //pop.setTitle("Continue", for: .normal)
+        
     }
 
 

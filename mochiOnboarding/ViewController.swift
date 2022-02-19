@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         continueButton.layer.backgroundColor = UIColor(red: 0.486, green: 0.165, blue: 0.906, alpha: 1).cgColor
         continueButton.layer.cornerRadius = 5
         continueButton.tintColor = .white
-        continueButton.setTitle("Continue", for: .normal)
+        //continueButton.setTitle("Continue", for: .normal)
         
     }
 
