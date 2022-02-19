@@ -84,10 +84,9 @@ def create_tables():
 def join_events(netid, eventid):
     try:
         UserEvent.create(
-            user = User.select().where(User.netid == netid)
-            event = Event.select().where(Event.id == eventid)
+            user = User.get().where(User.netid == netid)
+            event = Event.get().where(Event.id == eventid)
         )
-        return True
     except:
         return False
 
@@ -108,14 +107,26 @@ def confirm_attendancce(netid, eventid):
         attendance_json = request.json
         attendance_data = json.loads(attendance_json)
         if attendance_data == False:
-            User = User.select().where(User.netid == netid)
-            Event = Event.select().where(Event.id == eventid)
-            deletedEvent = UserEvent.select().where(UserEvent.user == User, UserEvent.event == Event)
+            User = User.get().where(User.netid == netid)
+            Event = Event.get().where(Event.id == eventid)
+            deletedEvent = UserEvent.get().where(UserEvent.user == User, UserEvent.event == Event)
             qry = UserEvent.delete().where(UserEvent == deletedEvent)
             qry.execute()
         return True
     except:
         return False
+
+@app.route("get_attendance/<eventid>/", methods=['GET'])
+def get_attendance(eventid):
+    attendees = []
+    Event = Event.get().where(Event.id == eventid)
+    UserEvents = UserEvent.select().where(UserEvent.event == Event)
+    for UserEvent in UserEvents:
+        attendees
+        attendees.append({
+            'netid': UserEvent.user.netid,
+            'user': UserEvent.user.name})
+    return str(json.dumps(attendees))
 
 if __name__ == "__main__":
     user_id = create_tables()
