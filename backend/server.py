@@ -118,19 +118,19 @@ def get_users():
 @app.route("/create_user/", methods = ["POST"])
 def create_user():
     try:
-        user_json = request.json
-        user_data = json.loads(user_json)
+        user_data = request.json
         User.create(
-            name=user_data.name,
-            college=user_data.college,
-            year=user_data.year,
-            major=user_data.major,
-            netid=user_data.netid,
-            interests=user_data.interests,
+            name=user_data["name"],
+            college=user_data["college"],
+            year=user_data["year"],
+            major=user_data["major"],
+            netid=user_data["netid"],
+            interests=user_data["interests"]
         )
-        return true
-    except:
-        return false
+        return str(True)
+    except Exception as e:
+        print(e)
+        return str(False)
     
 
 @app.route("/hello2/")
