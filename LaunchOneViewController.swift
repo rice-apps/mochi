@@ -23,7 +23,8 @@ class LaunchOneViewController: UIViewController {
         LaunchQOne.numberOfLines = 0
         LaunchQOne.lineBreakMode = .byWordWrapping
         
-        launchFinish.frame = CGRect(x: 219, y: 628, width: 139, height: 52)
+        launchFinish.frame = CGRect(x: 219, y: UIScreen.main.bounds.height * 0.85, width: 139, height: 52)
+        //628
         launchFinish.setTitleColor(.white, for: .normal)
         launchFinish.layer.backgroundColor = UIColor(red: 0.486, green: 0.165, blue: 0.906, alpha: 1).cgColor
         launchFinish.layer.cornerRadius = 5
