@@ -5,10 +5,11 @@
 
 ## Onboarding#
 ### Mac Users:#
-1. install postgres via brew
+1. install postgres via brew 
 ```
 brew install postgres
 ```
+(If you haven't installed homebrew, install it [here](https://brew.sh/))
 2. Download postgres client [here](https://postgresapp.com/). To view the tables with UI, download [Postico](https://eggerapps.at/postico/).
 3. Open your postgres app, start a local postgres server. Click on ** server settings... ** and change the port number to ** 3142 **. Open preference and set ** Open database with ** option to Postico.
 4. install python packages (peewee, flask, psycopg2, and any other packages our program requires) via pip.
@@ -20,6 +21,11 @@ pip3 install peewee
 5. run
 ```
 cd backend
+python3 server.py
 python3 dbsetup.py
 ```
 and check the postgres client, click on the database icon labeled with ** Postgres **, a Postico window should pop up and show you all the tables.
+6. To start the backend, run
+```
+python3 wsgi.py
+```
