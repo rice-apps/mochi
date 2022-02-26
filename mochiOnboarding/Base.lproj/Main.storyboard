@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sRZ-Un-6Fa">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sRZ-Un-6Fa">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mochiOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C10-tc-zpv">
@@ -66,7 +66,7 @@
             <objects>
                 <viewController id="yHe-Ow-49a" customClass="QuestionOneViewController" customModule="mochiOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aNn-p5-40w">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avx-gv-eMr">
@@ -233,7 +233,7 @@
             <objects>
                 <viewController id="wIc-W6-j9Q" customClass="LaunchOneViewController" customModule="mochiOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OT2-8g-RZ8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4v-u0-Mbx">
@@ -313,7 +313,7 @@
             <objects>
                 <viewController id="Ut2-ow-zy3" customClass="LaunchConfirmViewController" customModule="mochiOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3IW-ed-xy4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77b-Xc-c1K">
@@ -354,7 +354,7 @@
             <objects>
                 <viewController id="7s8-0m-EE5" customClass="QuestionTwoViewController" customModule="mochiOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7YY-iQ-K50">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUT-zG-qHI">
@@ -400,7 +400,7 @@
             <objects>
                 <viewController id="ZEn-Oa-pJv" customClass="QuestionThreeViewController" customModule="mochiOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N7h-ZE-Trc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFG-ug-fxs">
@@ -440,7 +440,7 @@
             <objects>
                 <viewController id="ukB-DV-ZkP" customClass="OnboardingConfirmationViewController" customModule="mochiOnboarding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydg-Cf-MtZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="confirmationLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3b-nS-bZA">
@@ -486,7 +486,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sRZ-Un-6Fa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAW-f1-UtU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -504,7 +504,7 @@
             <size key="intrinsicContentSize" width="50" height="31"/>
         </designable>
         <designable name="7IV-Rh-Z3C">
-            <size key="intrinsicContentSize" width="78.5" height="35.5"/>
+            <size key="intrinsicContentSize" width="78.333333333333329" height="35.666666666666664"/>
         </designable>
         <designable name="Bhl-hC-9RK">
             <size key="intrinsicContentSize" width="55" height="31"/>
@@ -516,55 +516,55 @@
             <size key="intrinsicContentSize" width="79" height="31"/>
         </designable>
         <designable name="Ieo-Sx-WFO">
-            <size key="intrinsicContentSize" width="78.5" height="35.5"/>
+            <size key="intrinsicContentSize" width="78.333333333333329" height="35.666666666666664"/>
         </designable>
         <designable name="POO-Z6-n9H">
-            <size key="intrinsicContentSize" width="51.5" height="31"/>
+            <size key="intrinsicContentSize" width="51.333333333333336" height="31"/>
         </designable>
         <designable name="RJo-HQ-73F">
-            <size key="intrinsicContentSize" width="52.5" height="31"/>
+            <size key="intrinsicContentSize" width="52.333333333333336" height="31"/>
         </designable>
         <designable name="VIw-WO-Jb6">
-            <size key="intrinsicContentSize" width="78.5" height="35.5"/>
+            <size key="intrinsicContentSize" width="78.333333333333329" height="35.666666666666664"/>
         </designable>
         <designable name="VuD-l5-sHL">
             <size key="intrinsicContentSize" width="90" height="31"/>
         </designable>
         <designable name="dkS-V4-owk">
-            <size key="intrinsicContentSize" width="123.5" height="31"/>
+            <size key="intrinsicContentSize" width="123.33333333333333" height="31"/>
         </designable>
         <designable name="e6b-gE-gAX">
-            <size key="intrinsicContentSize" width="78.5" height="35.5"/>
+            <size key="intrinsicContentSize" width="78.333333333333329" height="35.666666666666664"/>
         </designable>
         <designable name="fvN-J8-a6W">
-            <size key="intrinsicContentSize" width="78.5" height="35.5"/>
+            <size key="intrinsicContentSize" width="78.333333333333329" height="35.666666666666664"/>
         </designable>
         <designable name="gHl-7F-mKE">
-            <size key="intrinsicContentSize" width="48" height="31"/>
+            <size key="intrinsicContentSize" width="47.666666666666664" height="31"/>
         </designable>
         <designable name="ipb-K3-4lq">
             <size key="intrinsicContentSize" width="102" height="31"/>
         </designable>
         <designable name="o9M-cl-0Kg">
-            <size key="intrinsicContentSize" width="47.5" height="31"/>
+            <size key="intrinsicContentSize" width="47.333333333333336" height="31"/>
         </designable>
         <designable name="paE-LU-fTS">
-            <size key="intrinsicContentSize" width="72.5" height="31"/>
+            <size key="intrinsicContentSize" width="72.333333333333329" height="31"/>
         </designable>
         <designable name="upy-3H-a40">
-            <size key="intrinsicContentSize" width="45.5" height="31"/>
+            <size key="intrinsicContentSize" width="45.333333333333336" height="31"/>
         </designable>
         <designable name="uuS-E5-bfY">
-            <size key="intrinsicContentSize" width="73.5" height="31"/>
+            <size key="intrinsicContentSize" width="73.666666666666671" height="31"/>
         </designable>
         <designable name="vCr-x2-rfc">
             <size key="intrinsicContentSize" width="50" height="31"/>
         </designable>
         <designable name="wc2-vw-1UX">
-            <size key="intrinsicContentSize" width="62.5" height="31"/>
+            <size key="intrinsicContentSize" width="62.333333333333336" height="31"/>
         </designable>
         <designable name="yx9-Kd-ac3">
-            <size key="intrinsicContentSize" width="52.5" height="31"/>
+            <size key="intrinsicContentSize" width="52.333333333333336" height="31"/>
         </designable>
     </designables>
     <color key="tintColor" name="AccentColor"/>
