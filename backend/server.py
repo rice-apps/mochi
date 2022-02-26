@@ -62,13 +62,17 @@ class User(BaseModel):
         users = User.select()
         return get_JSON_from_users(users)
 
-    def get_user_from_netid(netid):
+    def get_user_from_netid(netid, return_json = True):
         try:
             users = User.select().where(User.netid == netid)
-            return get_JSON_from_users(users)
+            if return_json:
+                return get_JSON_from_users(users)
+            else:
+                return users
         except Exception as e:
             print(e)
             return str(None)
+
 
 class Event(BaseModel):
     location = CharField()
@@ -80,11 +84,15 @@ class Event(BaseModel):
     def get_all_upcoming_events():
         events = (
             Event.select()
+            .where(Event.timestamp > datetime.datetime.now())
             .order_by(Event.timestamp)
         )
         return get_JSON_from_events(events)
 
     def get_events(netid):
+        '''
+        Retrieves a list of upcoming events that a user is registered for.
+        '''
         events = (
             Event.select()
             .where(Event.timestamp > datetime.datetime.now())
@@ -96,13 +104,16 @@ class Event(BaseModel):
 
         return get_JSON_from_events(events)
     
-    def get_event_from_id(uniqueID):
+    def get_event_from_id(uniqueID, return_json = True):
         try:
             event = (
             Event.select()
             .where(Event.uniqueID == uniqueID)
         )
-            return get_JSON_from_events(event)
+            if return_json:
+                return get_JSON_from_events(event)
+            else:
+                return event
         except Exception as e:
             print(e)
             return str(None)
@@ -110,6 +121,8 @@ class Event(BaseModel):
 class UserEvent(BaseModel):
     user = ForeignKeyField(User, backref="user_events")
     event = ForeignKeyField(Event, backref="event_users")
+    # userID = CharField()
+    # eventID = CharField()
 
 @app.route("/create_tables/")
 def create_tables():
@@ -132,7 +145,7 @@ def create_tables():
         users=[user1.netid],
     )
 
-    event1 = Event.create(
+    event2 = Event.create(
         uniqueID = "2",
         location="Brochstein",
         description="Our second event",
@@ -229,8 +242,8 @@ def signup_for_event(userID, eventID):
         .execute()
 
     UserEvent.create(
-            user = user,
-            event = event
+            user = User.get_user_from_netid(userID, False),
+            event = Event.get_event_from_id(eventID, False)
         )
     
     return "Done"
