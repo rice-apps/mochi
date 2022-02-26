@@ -23,7 +23,7 @@ class User(BaseModel):
     year = CharField()
     major = CharField()
     interests = ArrayField(CharField)
-    netid = CharField()
+    netid = CharField(primary_key = True)
 
     def get_users():
         users = User.select()
@@ -139,3 +139,4 @@ def hello_world():
 
 if __name__ == "__main__":
     user_id = create_tables()
+    print(user_id)

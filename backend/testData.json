@@ -1,0 +1,87 @@
+{"users":[
+    {
+       "name":"Rajesh",
+       "college":"Brown",
+       "year":"2023",
+       "major":"Computer Science",
+       "netid":"rj",
+       "interests":[
+          
+       ]
+    },
+    {
+       "name":"Annita",
+       "college":"Will Rice",
+       "year":"2023",
+       "major":"Cognitive Science",
+       "netid":"yz157",
+       "interests":[
+          
+       ]
+    },
+    {
+       "name":"Ethan Bell",
+       "college":"Baker",
+       "year":"2024",
+       "major":"Psychology",
+       "netid":"eb45",
+       "interests":[
+          
+       ]
+    },
+    {
+       "name":"Eunice",
+       "college":"Lovett",
+       "year":"2025",
+       "major":"Mechanical Engineering",
+       "netid":"ea49",
+       "interests":[
+          
+       ]
+    },
+    {
+       "name":"Mineote",
+       "college":"Jones",
+       "year":"2023",
+       "major":"Visual and Dramatic Art",
+       "netid":"mk87",
+       "interests":[
+          
+       ]
+    },
+    {
+       "name":"Rey",
+       "college":"Martel",
+       "year":"2025",
+       "major":"History",
+       "netid":"rl193",
+       "interests":[
+          
+       ]
+    }
+ ],
+
+ "events": [
+    {
+       "location":"college commons",
+       "title":"Weekday Lunch Social",
+       "description":"Come meet new ppl at Rice.",
+       "timestamp":"",
+       "groupsize":"4-6"
+    },
+    {
+       "location":"college game rooms",
+       "title":"Monopoly Social",
+       "description":"",
+       "groupsize":"4-8",
+       "timestamp":""
+    },
+    {
+       "location":"Jones commons",
+       "title":"COMP310 ChatApp Hackathon Night",
+       "description":"Come do COMP310 chat app project together at Jones. Groupwork makes testing easier.",
+       "timestamp":"",
+       "groupsize":"50"
+    }
+ ]
+}
