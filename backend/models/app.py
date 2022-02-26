@@ -5,7 +5,7 @@ from playhouse.postgres_ext import *
 
 from ..server import app
 
-pg_db = PostgresqlExtDatabase("mochi", user="postgres", password="postgres", port=5432)
+pg_db = PostgresqlExtDatabase("mochi", user="postgres", password="edmondkirsch3142", port=3142)
 
 
 class BaseModel(Model):
@@ -19,7 +19,7 @@ class User(BaseModel):
     year = CharField()
     major = CharField()
     interests = ArrayField(CharField)
-
+    netid = CharField()
 
 class Event(BaseModel):
     location = CharField()
@@ -44,7 +44,7 @@ class UserEvent(BaseModel):
     user = ForeignKeyField(User, backref="user_events")
     event = ForeignKeyField(Event, backref="event_users")
 
-
+@app.route("/create_tables/")
 def create_tables():
     pg_db.create_tables([User, Event, UserEvent], safe=True)
 
@@ -67,13 +67,15 @@ def create_tables():
     print("done\n")
     return user1.id
 
-
 @app.route("/<username>/events/")
 def upcoming_events(username):
     user = get_object_or_404(User, User.name == username)
     events = Event.get_events(user.id)
     return object_list("upcoming_events.html", events, "upcoming_events", user=user)
 
+@app.route("/hello2/")
+def hello_world():
+    return "Hello2, world!\n"
 
 if __name__ == "__main__":
     user_id = create_tables()
