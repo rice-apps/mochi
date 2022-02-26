@@ -21,10 +21,11 @@ def get_JSON_from_events(events):
             {"location": event.location,
             "description": event.description,
             "timestamp": str(event.timestamp),
-            "uniqueID": event.uniqueID
+            "uniqueID": event.uniqueID, 
+            "users": event.users
             }))
 
-    return str(event_list)
+    return json.dumps(event_list)
 
 def get_JSON_from_users(users):
     user_list = []
@@ -42,7 +43,8 @@ def get_JSON_from_users(users):
                 "netid": user.netid
                 }))
     
-    return str(user_list)
+    print(json.dumps(user_list))
+    return json.dumps(user_list)
 
 class BaseModel(Model):
     class Meta:
@@ -73,11 +75,11 @@ class Event(BaseModel):
     description = TextField()
     timestamp = DateTimeField(default=datetime.datetime.now)
     uniqueID = CharField()
+    users = ArrayField(CharField)
 
     def get_all_upcoming_events():
         events = (
             Event.select()
-            .where(Event.timestamp > datetime.datetime.now())
             .order_by(Event.timestamp)
         )
         return get_JSON_from_events(events)
@@ -127,12 +129,22 @@ def create_tables():
         location="Fondy",
         description="Our first event",
         timestamp=datetime.date.today() + datetime.timedelta(days=1),
-        users=[user1],
+        users=[user1.netid],
     )
+
+    event1 = Event.create(
+        uniqueID = "2",
+        location="Brochstein",
+        description="Our second event",
+        timestamp=datetime.date.today() + datetime.timedelta(days=2),
+        users=[],
+    )
+
+    print("Added users and events")
 
     UserEvent.create(user=user1, event=event1)
 
-    print("done\n")
+    print("Added userEvent row\n")
     return str(user1.id)
 
 @app.route("/<netid>/events/")
@@ -162,6 +174,9 @@ def get_user_from_netid(netid):
 
 @app.route("/create_user/", methods = ["POST"])
 def create_user():
+    '''
+    Creates a user and returns a boolean confirmation (as a string)
+    '''
     try:
         user_data = request.json
         User.create(
@@ -177,9 +192,70 @@ def create_user():
         print(e)
         return str(False)
 
-@app.route("/hello2/")
+@app.route("/signup/<userID>/<eventID>")
+def signup_for_event(userID, eventID):
+    '''
+    Signs a user up for an event
+    Inputs:
+        userID: netid of the user
+        eventID: event ID of the event the user is signing up for
+    Outputs:
+        "Done" if signup successful, an error message if unsuccessful
+    '''
+
+    print(userID)
+    print(eventID)
+
+    try:
+        user = json.loads(json.loads(User.get_user_from_netid(userID))[0])
+    except:
+        return "User not found"
+
+    try:
+        event = json.loads(json.loads(Event.get_event_from_id(eventID))[0])
+    except:
+        return "Event not found"
+    
+    print("User:", user)
+    print("Event:", event)
+    print("Event users:", event["users"], type(event["users"]))
+    attending = event["users"]
+    if (userID in attending):
+        return "Error: User already signed up for event"
+    attending.append(userID)
+    Event.update({
+        Event.users:attending})\
+        .where(Event.uniqueID == eventID)\
+        .execute()
+
+    UserEvent.create(
+            user = user,
+            event = event
+        )
+    
+    return "Done"
+
+@app.route("/update_interests/", methods = ["POST"])
+def update_interests():
+    """
+    Updates the interests of a given user.
+        Inputs: JSON with a "userID" field (string) and an "interests" field (list of strings)
+        Outputs: Boolean confirmation(as a string)
+    """
+    try:
+        interest_data = request.json
+        User.update({
+        User.interests:interest_data["interests"]})\
+        .where(User.netid == interest_data["userID"])\
+        .execute()
+        return str(True)
+
+    except Exception as e:
+        return str(False)
+
+@app.route("/hello/")
 def hello_world():
-    return "Hello2, world!\n"
+    return "Hello, world!\n"
 
 if __name__ == "__main__":
     user_id = create_tables()
