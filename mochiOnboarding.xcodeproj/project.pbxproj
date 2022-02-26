@@ -19,6 +19,7 @@
 		43EB685327C0D34B006D786A /* QuestionTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685227C0D34B006D786A /* QuestionTwoViewController.swift */; };
 		43EB685527C0D7DF006D786A /* QuestionThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */; };
 		43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */; };
+		883A635927CAB491000E581C /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883A635827CAB491000E581C /* UpcomingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		43EB685227C0D34B006D786A /* QuestionTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTwoViewController.swift; sourceTree = "<group>"; };
 		43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionThreeViewController.swift; sourceTree = "<group>"; };
 		43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConfirmationViewController.swift; sourceTree = "<group>"; };
+		883A635827CAB491000E581C /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */,
+				883A635827CAB491000E581C /* UpcomingViewController.swift */,
 				4368742427C1815B001F1258 /* LaunchOneViewController.swift */,
 				439535B627AEFA8600D4E4CB /* mochiOnboarding */,
 				439535B527AEFA8600D4E4CB /* Products */,
@@ -164,6 +167,7 @@
 				4368742527C1815B001F1258 /* LaunchOneViewController.swift in Sources */,
 				43EB685327C0D34B006D786A /* QuestionTwoViewController.swift in Sources */,
 				43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */,
+				883A635927CAB491000E581C /* UpcomingViewController.swift in Sources */,
 				439535CC27AF0CB100D4E4CB /* QuestionOneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
