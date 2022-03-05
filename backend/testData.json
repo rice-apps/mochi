@@ -67,21 +67,24 @@
        "title":"Weekday Lunch Social",
        "description":"Meet new ppl at Rice! Your matching result is generated based on your interest.",
        "timestamp":"",
-       "groupsize":"4-6"
+       "groupsize":"4-6",
+       "uniqueID" : "test01"
     },
     {
        "location":"college game rooms",
        "title":"Monopoly Social",
        "description":"",
        "groupsize":"4-8",
-       "timestamp":""
+       "timestamp":"",
+       "uniqueID" : "test02"
     },
     {
        "location":"Jones commons",
        "title":"COMP310 ChatApp Hackathon Night",
        "description":"Come do COMP310 chat app project together at Jones. Groupwork makes testing easier.",
        "timestamp":"",
-       "groupsize":"50"
+       "groupsize":"0-inf",
+       "uniqueID" : "test03"
     }
  ]
 }
