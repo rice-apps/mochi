@@ -16,13 +16,12 @@ def get_JSON_from_events(events):
 
     # Add each event as a JSON to the output list
     for event in events:
-        print(event.description)
         event_list.append(json.dumps(
             {"location": event.location,
             "description": event.description,
             "timestamp": str(event.timestamp),
-            "uniqueID": event.uniqueID, 
-            "users": event.users
+            "users": event.users,
+            "id": event.id
             }))
 
     return json.dumps(event_list)
@@ -32,7 +31,6 @@ def get_JSON_from_users(users):
 
     # Add each user as a JSON to the output list
     for user in users:
-        print(user.netid)
         user_list.append(
             json.dumps(
                 {"name": user.name,
@@ -43,7 +41,6 @@ def get_JSON_from_users(users):
                 "netid": user.netid
                 }))
     
-    print(json.dumps(user_list))
     return json.dumps(user_list)
 
 class BaseModel(Model):
@@ -73,12 +70,10 @@ class User(BaseModel):
             print(e)
             return str(None)
 
-
 class Event(BaseModel):
     location = CharField()
     description = TextField()
     timestamp = DateTimeField(default=datetime.datetime.now)
-    uniqueID = CharField()
     users = ArrayField(CharField)
 
     def get_all_upcoming_events():
@@ -104,11 +99,11 @@ class Event(BaseModel):
 
         return get_JSON_from_events(events)
     
-    def get_event_from_id(uniqueID, return_json = True):
+    def get_event_from_id(ID, return_json = True):
         try:
             event = (
             Event.select()
-            .where(Event.uniqueID == uniqueID)
+            .where(Event.id == ID)
         )
             if return_json:
                 return get_JSON_from_events(event)
@@ -121,8 +116,8 @@ class Event(BaseModel):
 class UserEvent(BaseModel):
     user = ForeignKeyField(User, backref="user_events")
     event = ForeignKeyField(Event, backref="event_users")
-    # userID = CharField()
-    # eventID = CharField()
+    location = CharField()
+    group = IntegerField()
 
 @app.route("/create_tables/")
 def create_tables():
@@ -138,7 +133,6 @@ def create_tables():
         interests=["Coding", "Rock Climbing"],
     )
     event1 = Event.create(
-        uniqueID = "1",
         location="Fondy",
         description="Our first event",
         timestamp=datetime.date.today() + datetime.timedelta(days=1),
@@ -146,7 +140,6 @@ def create_tables():
     )
 
     event2 = Event.create(
-        uniqueID = "2",
         location="Brochstein",
         description="Our second event",
         timestamp=datetime.date.today() + datetime.timedelta(days=2),
@@ -205,6 +198,24 @@ def create_user():
         print(e)
         return str(False)
 
+@app.route("/create_event/", methods = ["POST"])
+def create_event():
+    '''
+    Creates an event and returns a boolean confirmation (as a string)
+    '''
+    try:
+        event_data = request.json
+        Event.create(
+            location = event["location"],
+            description = event["description"],
+            timestamp = event["timestamp"],
+            users = event["users"]
+        )
+        return str(True)
+    except Exception as e:
+        print(e)
+        return str(False)
+
 @app.route("/signup/<userID>/<eventID>")
 def signup_for_event(userID, eventID):
     '''
@@ -215,9 +226,6 @@ def signup_for_event(userID, eventID):
     Outputs:
         "Done" if signup successful, an error message if unsuccessful
     '''
-
-    print(userID)
-    print(eventID)
 
     try:
         user = json.loads(json.loads(User.get_user_from_netid(userID))[0])
