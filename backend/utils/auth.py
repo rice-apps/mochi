@@ -11,7 +11,7 @@ def createToken(user):
     return token
 
 
-async def verifyToken(token):
+def verifyToken(token):
     try:
         decoded = jwt.decode(token, "secret", algorithms=["HS256"])
         return {success: true, id: decoded[id]}
