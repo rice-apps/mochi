@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CardView: View {
-    let eventCard: EventCard
+@IBDesignable class CardView : UIView {
+    var eventCard: EventCard?
     
     @State private var isShowingDetail = false
     
@@ -17,14 +17,14 @@ struct CardView: View {
             RoundedRectangle(cornerRadius: 25, style: .continuous).fill(.white)
 
             VStack {
-                Text(eventCard.date).font(.largeTitle).foregroundColor(.black)
-                Text(eventCard.title).font(.largeTitle).foregroundColor(.black)
+                Text(eventCard!.date).font(.largeTitle).foregroundColor(.black)
+                Text(eventCard!.title).font(.largeTitle).foregroundColor(.black)
                 // display the icons of people attending
                 // Text(String(eventCard.participants) ).font(.largeTitle).foregroundColor(.black)
-                Text(eventCard.groupStatus).font(.largeTitle).foregroundColor(.black)
+                Text(eventCard!.groupStatus).font(.largeTitle).foregroundColor(.black)
                 
                 if isShowingDetail {
-                    Text(eventCard.detail)
+                    Text(eventCard!.detail)
                         .font(.title)
                         .foregroundColor(.gray)
                 }
@@ -33,14 +33,24 @@ struct CardView: View {
             .multilineTextAlignment(.center)
         }
         .frame(width: 450, height: 250)
-        .onTapGesture {
-            isShowingDetail.toggle()
+        .onTapGesture { [self] in
+            self.isShowingDetail.toggle()
         }
+    }
+
+    required init(ec:EventCard) {
+        self.eventCard = ec
+        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    }
+    
+    required init?(coder: NSCoder) {
+//        self.eventCard = EventCard()
+        super.init(coder: coder)
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(eventCard: EventCard.example)
-        }
-}
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some UIView {
+//        CardView(eventCard: EventCard.example)
+//        }
+//}
