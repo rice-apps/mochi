@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4368742527C1815B001F1258 /* LaunchOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4368742427C1815B001F1258 /* LaunchOneViewController.swift */; };
 		4368742727C185B9001F1258 /* LaunchConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */; };
+		437548BC27E44EEB00E98EB7 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 437548BB27E44EEA00E98EB7 /* Poppins-Medium.ttf */; };
+		437548BE27E44EF500E98EB7 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 437548BD27E44EF500E98EB7 /* Poppins-MediumItalic.ttf */; };
 		439535B827AEFA8600D4E4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439535B727AEFA8600D4E4CB /* AppDelegate.swift */; };
 		439535BA27AEFA8600D4E4CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439535B927AEFA8600D4E4CB /* SceneDelegate.swift */; };
 		439535BC27AEFA8600D4E4CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439535BB27AEFA8600D4E4CB /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		4368742427C1815B001F1258 /* LaunchOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchOneViewController.swift; sourceTree = "<group>"; };
 		4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchConfirmViewController.swift; sourceTree = "<group>"; };
+		437548BB27E44EEA00E98EB7 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		437548BD27E44EF500E98EB7 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		439535B427AEFA8600D4E4CB /* mochiOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mochiOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439535B727AEFA8600D4E4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439535B927AEFA8600D4E4CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		439535B627AEFA8600D4E4CB /* mochiOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				437548BB27E44EEA00E98EB7 /* Poppins-Medium.ttf */,
+				437548BD27E44EF500E98EB7 /* Poppins-MediumItalic.ttf */,
 				439535B727AEFA8600D4E4CB /* AppDelegate.swift */,
 				439535B927AEFA8600D4E4CB /* SceneDelegate.swift */,
 				439535BB27AEFA8600D4E4CB /* ViewController.swift */,
@@ -147,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				439535C427AEFA8800D4E4CB /* LaunchScreen.storyboard in Resources */,
+				437548BC27E44EEB00E98EB7 /* Poppins-Medium.ttf in Resources */,
 				439535C127AEFA8800D4E4CB /* Assets.xcassets in Resources */,
 				439535BF27AEFA8600D4E4CB /* Main.storyboard in Resources */,
+				437548BE27E44EF500E98EB7 /* Poppins-MediumItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
