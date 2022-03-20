@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0229AFAAF6D785CB10C987AE /* Pods_mochiOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A31BCDAE35669FABE374073 /* Pods_mochiOnboarding.framework */; };
 		4368742527C1815B001F1258 /* LaunchOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4368742427C1815B001F1258 /* LaunchOneViewController.swift */; };
 		4368742727C185B9001F1258 /* LaunchConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */; };
 		439535B827AEFA8600D4E4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439535B727AEFA8600D4E4CB /* AppDelegate.swift */; };
@@ -20,11 +21,13 @@
 		43EB685527C0D7DF006D786A /* QuestionThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */; };
 		43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */; };
 		883A635927CAB491000E581C /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883A635827CAB491000E581C /* UpcomingViewController.swift */; };
+		884F463927E77EE100FA33F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884F463827E77EE100FA33F9 /* ContentView.swift */; };
 		88B6187B27CABEBC004CC71D /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6187A27CABEBC004CC71D /* EventCard.swift */; };
 		88B6187D27CAC12C004CC71D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6187C27CAC12C004CC71D /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3880AF05ADF661C9B93589C9 /* Pods-mochiOnboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mochiOnboarding.debug.xcconfig"; path = "Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding.debug.xcconfig"; sourceTree = "<group>"; };
 		4368742427C1815B001F1258 /* LaunchOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchOneViewController.swift; sourceTree = "<group>"; };
 		4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchConfirmViewController.swift; sourceTree = "<group>"; };
 		439535B427AEFA8600D4E4CB /* mochiOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mochiOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,8 +43,11 @@
 		43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionThreeViewController.swift; sourceTree = "<group>"; };
 		43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConfirmationViewController.swift; sourceTree = "<group>"; };
 		883A635827CAB491000E581C /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
+		884F463827E77EE100FA33F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88B6187A27CABEBC004CC71D /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		88B6187C27CAC12C004CC71D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9A31BCDAE35669FABE374073 /* Pods_mochiOnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mochiOnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9BFACA2DEAB5C3368EC614B /* Pods-mochiOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mochiOnboarding.release.xcconfig"; path = "Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0229AFAAF6D785CB10C987AE /* Pods_mochiOnboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +67,12 @@
 			children = (
 				4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */,
 				883A635827CAB491000E581C /* UpcomingViewController.swift */,
+				884F463827E77EE100FA33F9 /* ContentView.swift */,
 				4368742427C1815B001F1258 /* LaunchOneViewController.swift */,
 				439535B627AEFA8600D4E4CB /* mochiOnboarding */,
 				439535B527AEFA8600D4E4CB /* Products */,
+				C1689089F617239F929E94FD /* Pods */,
+				A1070E3A4E893A888F79240A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +104,23 @@
 			path = mochiOnboarding;
 			sourceTree = "<group>";
 		};
+		A1070E3A4E893A888F79240A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A31BCDAE35669FABE374073 /* Pods_mochiOnboarding.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1689089F617239F929E94FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3880AF05ADF661C9B93589C9 /* Pods-mochiOnboarding.debug.xcconfig */,
+				B9BFACA2DEAB5C3368EC614B /* Pods-mochiOnboarding.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 439535C827AEFA8800D4E4CB /* Build configuration list for PBXNativeTarget "mochiOnboarding" */;
 			buildPhases = (
+				9A3206DCB1BF43B4A06C1806 /* [CP] Check Pods Manifest.lock */,
 				439535B027AEFA8600D4E4CB /* Sources */,
 				439535B127AEFA8600D4E4CB /* Frameworks */,
 				439535B227AEFA8600D4E4CB /* Resources */,
+				F3F5284A6957931E67F3A371 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +189,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9A3206DCB1BF43B4A06C1806 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mochiOnboarding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3F5284A6957931E67F3A371 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		439535B027AEFA8600D4E4CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -175,6 +246,7 @@
 				43EB685327C0D34B006D786A /* QuestionTwoViewController.swift in Sources */,
 				43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */,
 				883A635927CAB491000E581C /* UpcomingViewController.swift in Sources */,
+				884F463927E77EE100FA33F9 /* ContentView.swift in Sources */,
 				88B6187D27CAC12C004CC71D /* CardView.swift in Sources */,
 				439535CC27AF0CB100D4E4CB /* QuestionOneViewController.swift in Sources */,
 			);
@@ -320,6 +392,7 @@
 		};
 		439535C927AEFA8800D4E4CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3880AF05ADF661C9B93589C9 /* Pods-mochiOnboarding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +420,7 @@
 		};
 		439535CA27AEFA8800D4E4CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9BFACA2DEAB5C3368EC614B /* Pods-mochiOnboarding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

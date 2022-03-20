@@ -38,16 +38,21 @@ import SwiftUI
         }
     }
 
-    required init(ec:EventCard) {
+    required init(ec:EventCard) { //@ViewBuilder ec:()-> EventCard
         self.eventCard = ec
         super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        addSubview(ec)
     }
     
     required init?(coder: NSCoder) {
 //        self.eventCard = EventCard()
         super.init(coder: coder)
+//        addSubview(ec)
     }
 }
+
+
+
 
 //struct CardView_Previews: PreviewProvider {
 //    static var previews: some UIView {
