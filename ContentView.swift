@@ -10,8 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("hello").padding()
-        CardView(card: EventCard.example)
+//        Text("hello").padding()
+        CardView2(card: Card.example)
     }
 }
 

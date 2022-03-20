@@ -20,6 +20,8 @@
 		43EB685327C0D34B006D786A /* QuestionTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685227C0D34B006D786A /* QuestionTwoViewController.swift */; };
 		43EB685527C0D7DF006D786A /* QuestionThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */; };
 		43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */; };
+		88237BA527E7838E00D1C5F0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88237BA427E7838E00D1C5F0 /* Card.swift */; };
+		88237BA727E783BB00D1C5F0 /* CardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88237BA627E783BB00D1C5F0 /* CardView2.swift */; };
 		883A635927CAB491000E581C /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883A635827CAB491000E581C /* UpcomingViewController.swift */; };
 		884F463927E77EE100FA33F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884F463827E77EE100FA33F9 /* ContentView.swift */; };
 		88B6187B27CABEBC004CC71D /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6187A27CABEBC004CC71D /* EventCard.swift */; };
@@ -42,6 +44,8 @@
 		43EB685227C0D34B006D786A /* QuestionTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTwoViewController.swift; sourceTree = "<group>"; };
 		43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionThreeViewController.swift; sourceTree = "<group>"; };
 		43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConfirmationViewController.swift; sourceTree = "<group>"; };
+		88237BA427E7838E00D1C5F0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		88237BA627E783BB00D1C5F0 /* CardView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView2.swift; sourceTree = "<group>"; };
 		883A635827CAB491000E581C /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		884F463827E77EE100FA33F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88B6187A27CABEBC004CC71D /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */,
 				883A635827CAB491000E581C /* UpcomingViewController.swift */,
 				884F463827E77EE100FA33F9 /* ContentView.swift */,
+				88237BA627E783BB00D1C5F0 /* CardView2.swift */,
+				88237BA427E7838E00D1C5F0 /* Card.swift */,
 				4368742427C1815B001F1258 /* LaunchOneViewController.swift */,
 				439535B627AEFA8600D4E4CB /* mochiOnboarding */,
 				439535B527AEFA8600D4E4CB /* Products */,
@@ -240,11 +246,13 @@
 				4368742727C185B9001F1258 /* LaunchConfirmViewController.swift in Sources */,
 				439535B827AEFA8600D4E4CB /* AppDelegate.swift in Sources */,
 				88B6187B27CABEBC004CC71D /* EventCard.swift in Sources */,
+				88237BA727E783BB00D1C5F0 /* CardView2.swift in Sources */,
 				439535BA27AEFA8600D4E4CB /* SceneDelegate.swift in Sources */,
 				43EB685527C0D7DF006D786A /* QuestionThreeViewController.swift in Sources */,
 				4368742527C1815B001F1258 /* LaunchOneViewController.swift in Sources */,
 				43EB685327C0D34B006D786A /* QuestionTwoViewController.swift in Sources */,
 				43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */,
+				88237BA527E7838E00D1C5F0 /* Card.swift in Sources */,
 				883A635927CAB491000E581C /* UpcomingViewController.swift in Sources */,
 				884F463927E77EE100FA33F9 /* ContentView.swift in Sources */,
 				88B6187D27CAC12C004CC71D /* CardView.swift in Sources */,

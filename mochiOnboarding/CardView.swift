@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-@IBDesignable class CardView : UIView {
+@IBDesignable class CardView :
+    
+    UIView {
     var eventCard: EventCard?
     
     @State private var isShowingDetail = false
