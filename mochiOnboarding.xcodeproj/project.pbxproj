@@ -19,9 +19,13 @@
 		439535C427AEFA8800D4E4CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439535C227AEFA8800D4E4CB /* LaunchScreen.storyboard */; };
 		439535CC27AF0CB100D4E4CB /* QuestionOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */; };
 		43972E3D27CAC0A400136A0A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43972E3C27CAC0A400136A0A /* ExploreViewController.swift */; };
+		43B9155127E5B4E400198211 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B9155027E5B4E400198211 /* Poppins-SemiBold.ttf */; };
+		43D7F36027E660D40079F300 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D7F35F27E660D40079F300 /* EventDetailsViewController.swift */; };
 		43EB685327C0D34B006D786A /* QuestionTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685227C0D34B006D786A /* QuestionTwoViewController.swift */; };
 		43EB685527C0D7DF006D786A /* QuestionThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */; };
 		43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */; };
+		43EFC1BA27E6804F003D5B6B /* RegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EFC1B927E6804E003D5B6B /* RegisteredViewController.swift */; };
+		A6A8B31547B769ECF4D643B1 /* Pods_mochiOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40E58D55DCA75E7DA9A673C /* Pods_mochiOnboarding.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +43,15 @@
 		439535C527AEFA8800D4E4CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOneViewController.swift; sourceTree = "<group>"; };
 		43972E3C27CAC0A400136A0A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		43B9155027E5B4E400198211 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		43D7F35F27E660D40079F300 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		43EB685227C0D34B006D786A /* QuestionTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTwoViewController.swift; sourceTree = "<group>"; };
 		43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionThreeViewController.swift; sourceTree = "<group>"; };
 		43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConfirmationViewController.swift; sourceTree = "<group>"; };
+		43EFC1B927E6804E003D5B6B /* RegisteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewController.swift; sourceTree = "<group>"; };
+		79721BF22EFD5B47C4A0F695 /* Pods-mochiOnboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mochiOnboarding.debug.xcconfig"; path = "Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding.debug.xcconfig"; sourceTree = "<group>"; };
+		A2A799DDFA8807E810E1F0CE /* Pods-mochiOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mochiOnboarding.release.xcconfig"; path = "Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding.release.xcconfig"; sourceTree = "<group>"; };
+		F40E58D55DCA75E7DA9A673C /* Pods_mochiOnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mochiOnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A8B31547B769ECF4D643B1 /* Pods_mochiOnboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +73,8 @@
 				4368742427C1815B001F1258 /* LaunchOneViewController.swift */,
 				439535B627AEFA8600D4E4CB /* mochiOnboarding */,
 				439535B527AEFA8600D4E4CB /* Products */,
+				DF7FBDC36D8AA90DE8848C17 /* Pods */,
+				D4B187A5E36E9C5C755A339E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +89,7 @@
 		439535B627AEFA8600D4E4CB /* mochiOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				43B9155027E5B4E400198211 /* Poppins-SemiBold.ttf */,
 				437548BB27E44EEA00E98EB7 /* Poppins-Medium.ttf */,
 				437548BD27E44EF500E98EB7 /* Poppins-MediumItalic.ttf */,
 				439535B727AEFA8600D4E4CB /* AppDelegate.swift */,
@@ -83,6 +97,8 @@
 				439535BB27AEFA8600D4E4CB /* ViewController.swift */,
 				439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */,
 				439535BD27AEFA8600D4E4CB /* Main.storyboard */,
+				43EFC1B927E6804E003D5B6B /* RegisteredViewController.swift */,
+				43D7F35F27E660D40079F300 /* EventDetailsViewController.swift */,
 				43972E3C27CAC0A400136A0A /* ExploreViewController.swift */,
 				43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */,
 				43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */,
@@ -94,6 +110,23 @@
 			path = mochiOnboarding;
 			sourceTree = "<group>";
 		};
+		D4B187A5E36E9C5C755A339E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F40E58D55DCA75E7DA9A673C /* Pods_mochiOnboarding.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF7FBDC36D8AA90DE8848C17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79721BF22EFD5B47C4A0F695 /* Pods-mochiOnboarding.debug.xcconfig */,
+				A2A799DDFA8807E810E1F0CE /* Pods-mochiOnboarding.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 439535C827AEFA8800D4E4CB /* Build configuration list for PBXNativeTarget "mochiOnboarding" */;
 			buildPhases = (
+				F4CAEB23BF355B191AAA1A79 /* [CP] Check Pods Manifest.lock */,
 				439535B027AEFA8600D4E4CB /* Sources */,
 				439535B127AEFA8600D4E4CB /* Frameworks */,
 				439535B227AEFA8600D4E4CB /* Resources */,
+				E37F19E1EC76E721A8B378D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,12 +190,55 @@
 				439535C427AEFA8800D4E4CB /* LaunchScreen.storyboard in Resources */,
 				437548BC27E44EEB00E98EB7 /* Poppins-Medium.ttf in Resources */,
 				439535C127AEFA8800D4E4CB /* Assets.xcassets in Resources */,
+				43B9155127E5B4E400198211 /* Poppins-SemiBold.ttf in Resources */,
 				439535BF27AEFA8600D4E4CB /* Main.storyboard in Resources */,
 				437548BE27E44EF500E98EB7 /* Poppins-MediumItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E37F19E1EC76E721A8B378D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4CAEB23BF355B191AAA1A79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mochiOnboarding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		439535B027AEFA8600D4E4CB /* Sources */ = {
@@ -176,6 +254,8 @@
 				4368742527C1815B001F1258 /* LaunchOneViewController.swift in Sources */,
 				43EB685327C0D34B006D786A /* QuestionTwoViewController.swift in Sources */,
 				43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */,
+				43D7F36027E660D40079F300 /* EventDetailsViewController.swift in Sources */,
+				43EFC1BA27E6804F003D5B6B /* RegisteredViewController.swift in Sources */,
 				439535CC27AF0CB100D4E4CB /* QuestionOneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +400,7 @@
 		};
 		439535C927AEFA8800D4E4CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79721BF22EFD5B47C4A0F695 /* Pods-mochiOnboarding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +428,7 @@
 		};
 		439535CA27AEFA8800D4E4CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2A799DDFA8807E810E1F0CE /* Pods-mochiOnboarding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
