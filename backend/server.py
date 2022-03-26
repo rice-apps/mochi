@@ -150,7 +150,7 @@ def create_tables():
 
     print("Added users and events")
 
-    UserEvent.create(user=user1, event=event1)
+    UserEvent.create(user=user1, event=event1, location = "Room 100", group = 0)
 
     print("Added userEvent row\n")
     return str(user1.id)
@@ -290,7 +290,7 @@ def hello_world():
 #     except:
 #         return False
 
-@app.route("add_interests/<netid>/", methods=['POST', 'GET'])
+@app.route("/add_interests/<netid>/", methods=['POST', 'GET'])
 def add_interests(netid):
     try:
         interest_json = request.json
@@ -304,7 +304,7 @@ def add_interests(netid):
     except:
         return False
 
-@app.route("confirm_attendance/<netid>/<eventid>/", methods=['POST'])
+@app.route("/confirm_attendance/<netid>/<eventid>/", methods=['POST'])
 def confirm_attendancce(netid, eventid):
     try:
         attendance_json = request.json
@@ -319,7 +319,7 @@ def confirm_attendancce(netid, eventid):
     except:
         return False
 
-@app.route("get_attendance/<eventid>/", methods=['GET'])
+@app.route("/get_attendance/<eventid>/", methods=['GET'])
 def get_attendance(eventid):
     attendees = []
     Event = Event.get().where(Event.id == eventid)
@@ -331,7 +331,7 @@ def get_attendance(eventid):
             'user': UserEvent.user.name})
     return str(json.dumps(attendees))
 
-@app.route("login_profile/<netid>/", methods=['GET'])
+@app.route("/login_profile/<netid>/", methods=['GET'])
 def login_profile(netid):
     user = User.get_user_from_netid(netid)
     return user[0]
