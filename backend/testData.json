@@ -81,7 +81,7 @@
        "title":"COMP310 ChatApp Hackathon Night",
        "description":"Come do COMP310 chat app project together at Jones. Groupwork makes testing easier.",
        "timestamp":"",
-       "groupsize":"50"
+       "groupsize":"0-inf"
     }
  ]
 }

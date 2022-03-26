@@ -11,6 +11,8 @@ app = Flask(__name__)
 pg_db = PostgresqlExtDatabase("postgres", user="postgres",
                               password="edmondkirsch3142", host="localhost", port=3142)
 
+# TODO: create_size, assigning demand and sorting by demand, how far away two users are
+
 def get_JSON_from_events(events):
     event_list = []
 
@@ -277,6 +279,62 @@ def update_interests():
 @app.route("/hello/")
 def hello_world():
     return "Hello, world!\n"
+
+# @app.route("/join_event/<netid>/<eventid>/", methods=['POST'])
+# def join_events(netid, eventid):
+#     try:
+#         UserEvent.create(
+#         user = User.get_user_from_netid(netID, False),
+#         event = Event.get_event_from_id(eventid, False)
+#         )
+#     except:
+#         return False
+
+@app.route("add_interests/<netid>/", methods=['POST', 'GET'])
+def add_interests(netid):
+    try:
+        interest_json = request.json
+        interest_data = json.loads(interest_json)
+        interests = User.get().where(User.netid == netid).interests
+        for interest in interest_data:
+            interests.append(interest)
+        qry = User.update({User.interests:interests}).where(User.netid == netid)
+        qry.execute()
+        return True
+    except:
+        return False
+
+@app.route("confirm_attendance/<netid>/<eventid>/", methods=['POST'])
+def confirm_attendancce(netid, eventid):
+    try:
+        attendance_json = request.json
+        attendance_data = json.loads(attendance_json)
+        if attendance_data == False:
+            User = User.get().where(User.netid == netid)
+            Event = Event.get().where(Event.id == eventid)
+            deletedEvent = UserEvent.get().where(UserEvent.user == User, UserEvent.event == Event)
+            qry = UserEvent.delete().where(UserEvent == deletedEvent)
+            qry.execute()
+        return True
+    except:
+        return False
+
+@app.route("get_attendance/<eventid>/", methods=['GET'])
+def get_attendance(eventid):
+    attendees = []
+    Event = Event.get().where(Event.id == eventid)
+    UserEvents = UserEvent.select().where(UserEvent.event == Event)
+    for UserEvent in UserEvents:
+        attendees
+        attendees.append({
+            'netid': UserEvent.user.netid,
+            'user': UserEvent.user.name})
+    return str(json.dumps(attendees))
+
+@app.route("login_profile/<netid>/", methods=['GET'])
+def login_profile(netid):
+    user = User.get_user_from_netid(netid)
+    return user[0]
 
 if __name__ == "__main__":
     user_id = create_tables()
