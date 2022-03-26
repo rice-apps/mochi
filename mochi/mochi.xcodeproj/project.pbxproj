@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		650AD41D27AF09E6004D2730 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AD41C27AF09E6004D2730 /* AppDelegate.swift */; };
 		650AD41F27AF09E6004D2730 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AD41E27AF09E6004D2730 /* SceneDelegate.swift */; };
-		650AD42127AF09E6004D2730 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AD42027AF09E6004D2730 /* ViewController.swift */; };
+		650AD42127AF09E6004D2730 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AD42027AF09E6004D2730 /* LoginViewController.swift */; };
 		650AD42427AF09E6004D2730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650AD42227AF09E6004D2730 /* Main.storyboard */; };
 		650AD42727AF09E6004D2730 /* mochi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 650AD42527AF09E6004D2730 /* mochi.xcdatamodeld */; };
 		650AD42927AF09EA004D2730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650AD42827AF09EA004D2730 /* Assets.xcassets */; };
@@ -41,7 +41,7 @@
 		650AD41927AF09E6004D2730 /* mochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650AD41C27AF09E6004D2730 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		650AD41E27AF09E6004D2730 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		650AD42027AF09E6004D2730 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		650AD42027AF09E6004D2730 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		650AD42327AF09E6004D2730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		650AD42627AF09E6004D2730 /* mochi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mochi.xcdatamodel; sourceTree = "<group>"; };
 		650AD42827AF09EA004D2730 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			children = (
 				650AD41C27AF09E6004D2730 /* AppDelegate.swift */,
 				650AD41E27AF09E6004D2730 /* SceneDelegate.swift */,
-				650AD42027AF09E6004D2730 /* ViewController.swift */,
+				650AD42027AF09E6004D2730 /* LoginViewController.swift */,
 				65D5097327EF51F30066B681 /* WebViewController.swift */,
 				650AD42227AF09E6004D2730 /* Main.storyboard */,
 				650AD42827AF09EA004D2730 /* Assets.xcassets */,
@@ -264,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				650AD42127AF09E6004D2730 /* ViewController.swift in Sources */,
+				650AD42127AF09E6004D2730 /* LoginViewController.swift in Sources */,
 				650AD41D27AF09E6004D2730 /* AppDelegate.swift in Sources */,
 				650AD42727AF09E6004D2730 /* mochi.xcdatamodeld in Sources */,
 				65D5097427EF51F30066B681 /* WebViewController.swift in Sources */,
