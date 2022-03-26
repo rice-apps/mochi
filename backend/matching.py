@@ -55,7 +55,17 @@ def create_size(lower, upper, people):
     """
     Creates a list of all the group sizes
     """
-
+    assert lower >= 0 and upper > 0
+    size = lower
+    sizes = []
+    people_left = len(people)
+    while people_left:
+        if people_left - size >= size:
+            sizes.append(size)
+            people_left -= size
+        else:
+            size += 1
+    return sizes
 
 def people_by_demand(people):
     """
