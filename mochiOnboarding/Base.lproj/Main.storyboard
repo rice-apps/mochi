@@ -353,7 +353,6 @@
                     <connections>
                         <segue destination="Wf5-gm-1UY" kind="relationship" relationship="viewControllers" id="CNj-MQ-eHy"/>
                         <segue destination="g48-Yt-7yh" kind="relationship" relationship="viewControllers" id="j2O-11-sUG"/>
-                        <segue destination="rU2-CL-m4R" kind="relationship" relationship="viewControllers" id="hAZ-bB-W1W"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqs-RD-S52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -643,23 +642,6 @@
             </objects>
             <point key="canvasLocation" x="2587" y="2613"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="wF8-Qx-drH">
-            <objects>
-                <navigationController id="rU2-CL-m4R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.fill" catalog="system" id="1Ru-bP-N7I"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VZL-xR-J6J">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="o35-RG-KCM" kind="relationship" relationship="rootViewController" id="lhU-cb-QO3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7pA-Q0-t8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3345" y="2613"/>
-        </scene>
         <!--Explore View Controller-->
         <scene sceneID="P8R-UO-dkd">
             <objects>
@@ -814,22 +796,6 @@
             </objects>
             <point key="canvasLocation" x="3344" y="4054"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="QYd-RT-87t">
-            <objects>
-                <viewController id="o35-RG-KCM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="t56-b4-Rz7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="prD-ho-zv0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4OA-RH-WvC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kIT-3t-OjD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3345" y="3360"/>
-        </scene>
     </scenes>
     <designables>
         <designable name="6VI-NI-yhG">
@@ -907,7 +873,6 @@
         <image name="introImage" width="512" height="512"/>
         <image name="laugh" width="460" height="460"/>
         <image name="location.fill.viewfinder" catalog="system" width="128" height="115"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

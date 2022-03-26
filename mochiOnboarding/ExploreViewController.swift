@@ -8,6 +8,7 @@ import Cards
 import UIKit
 
 class ExploreViewController: UIViewController {
+    var actionBtn = UIButton()
     
     private var card: CardHighlight = {
         //let card = CardHighlight(frame: .zero)
@@ -38,9 +39,21 @@ class ExploreViewController: UIViewController {
         exploreTitle.frame = CGRect(x: 32, y: 70, width: 225, height: 36)
         exploreTitle.font = UIFont(name: "Poppins-SemiBold", size: 24)
         view.addSubview(card)
-        
+
         
     }
+    
+    @objc  func buttonTapped(){
+        UIView.animate(withDuration: 0.2, animations: {
+            self.actionBtn.transform = CGAffineTransform(scaleX: 0.90, y: 0.90)
+        }) { _ in
+            UIView.animate(withDuration: 0.1, animations: {
+                self.actionBtn.transform = CGAffineTransform.identity
+            })
+        }
+        //delegate?.cardHighlightDidTapButton?(card: self, button: actionBtn)
+    }
+
 
     
     override func viewDidLayoutSubviews() {

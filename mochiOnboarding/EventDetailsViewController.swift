@@ -26,15 +26,15 @@ class EventDetailsViewController: UIViewController {
         detailsLabel.text = "Event Details"
         detailsLabel.font = UIFont(name: "Poppins-SemiBold", size: 24)
         
-        var eventName = "Dinner"
+        var eventName = "RiceApps Work Break"
         eventLabel.text = "Event Name: " + "\(eventName)"
         eventLabel.font = UIFont(name: "Poppins-Medium", size: 18)
         
-        var location = "West Servery"
+        var location = "Lilie Lab"
         locationLabel.text = "Location: " + "\(location)"
         locationLabel.font = UIFont(name: "Poppins-Medium", size: 18)
         
-        var date = "Dec 10, 2021 6:00 PM"
+        var date = "Apr 16, 2022 12:30 PM"
         dateLabel.text = "When: " + "\(date)"
         dateLabel.font = UIFont(name: "Poppins-Medium", size: 18)
         
