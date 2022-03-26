@@ -9,7 +9,13 @@ import UIKit
 
 
 @IBDesignable class SelectionButton: UIButton {
-
+    // a list that stores the answers to the first question
+    var answers: [String] = []
+//    
+//    for prime in answers {
+//        print("\(prime)")
+//    }
+    
     // Allows developer to edit what colors are shown in each state
     @IBInspectable var borderColorSelected:UIColor = UIColor.black
     @IBInspectable var borderColorDeselected:UIColor = UIColor.black
@@ -58,11 +64,25 @@ import UIKit
     @objc func onPress() {
         print("Button Pressed")
         active = !active
+        let buttonTitle = self.titleLabel?.text
         
         if active {
             setSelected()
+            //add selected button to the list
+            answers.append(buttonTitle!)
+            print("adding element")
+            print(buttonTitle ?? "default")
         } else {
             setDeselected()
+            //delete selected button from the list
+            if let index = answers.firstIndex(of: buttonTitle!) {
+                print("deleting element")
+                print(index)
+                print(buttonTitle ?? "default")
+                answers.remove(at: index)
+            }
+            
+
         }
     }
     
