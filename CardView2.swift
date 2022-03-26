@@ -50,6 +50,8 @@ struct CardView2: View {
     }
 }
 
+//let vc = UIHostingController(rootView: Text("Hello World"))
+
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView2(card: Card.example)
