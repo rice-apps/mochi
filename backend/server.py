@@ -7,6 +7,7 @@ from flask import Flask
 from flask import request
 app = Flask(__name__)
 
+from utils import auth
 
 pg_db = PostgresqlExtDatabase("postgres", user="postgres",
                               password="edmondkirsch3142", host="localhost", port=3142)
@@ -339,3 +340,11 @@ def login_profile(netid):
 if __name__ == "__main__":
     user_id = create_tables()
     print(user_id)
+    
+@app.route("/login/<ticket>")
+def login(ticket):
+    netid = auth.login_auth(ticket)
+    
+    return auth.createToken({"netid": netid})
+    
+    
