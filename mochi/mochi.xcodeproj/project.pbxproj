@@ -17,6 +17,7 @@
 		650AD43727AF09EA004D2730 /* mochiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AD43627AF09EA004D2730 /* mochiTests.swift */; };
 		650AD44127AF09EA004D2730 /* mochiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AD44027AF09EA004D2730 /* mochiUITests.swift */; };
 		650AD44327AF09EA004D2730 /* mochiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AD44227AF09EA004D2730 /* mochiUITestsLaunchTests.swift */; };
+		65D5097427EF51F30066B681 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D5097327EF51F30066B681 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		650AD43C27AF09EA004D2730 /* mochiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mochiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		650AD44027AF09EA004D2730 /* mochiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mochiUITests.swift; sourceTree = "<group>"; };
 		650AD44227AF09EA004D2730 /* mochiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mochiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		65D5097327EF51F30066B681 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				650AD41C27AF09E6004D2730 /* AppDelegate.swift */,
 				650AD41E27AF09E6004D2730 /* SceneDelegate.swift */,
 				650AD42027AF09E6004D2730 /* ViewController.swift */,
+				65D5097327EF51F30066B681 /* WebViewController.swift */,
 				650AD42227AF09E6004D2730 /* Main.storyboard */,
 				650AD42827AF09EA004D2730 /* Assets.xcassets */,
 				650AD42A27AF09EA004D2730 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				650AD42127AF09E6004D2730 /* ViewController.swift in Sources */,
 				650AD41D27AF09E6004D2730 /* AppDelegate.swift in Sources */,
 				650AD42727AF09E6004D2730 /* mochi.xcdatamodeld in Sources */,
+				65D5097427EF51F30066B681 /* WebViewController.swift in Sources */,
 				650AD41F27AF09E6004D2730 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
