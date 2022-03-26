@@ -28,7 +28,7 @@ class RegisteredViewController: UIViewController {
         let firstAttributes: [NSAttributedString.Key: Any] = [ .foregroundColor: UIColor(red: 0.486, green: 0.165, blue: 0.906, alpha: 1), .font: UIFont(name: "Poppins-Medium", size: 12.0)!]
         let firstString = NSAttributedString(string: "\(event)", attributes: firstAttributes)
         
-        registeredLabel?.setAttributedTitle(firstString, for: [])
+        //registeredLabel?.setAttributedTitle(firstString, for: [])
         
         registeredSubtitle.text = "You will receive an email once you have been paired with a group."
         registeredSubtitle.font = UIFont(name: "Poppins-Medium", size: 18)

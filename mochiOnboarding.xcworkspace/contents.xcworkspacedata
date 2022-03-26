@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:mochiOnboarding.xcodeproj">
+      location = "group:/Users/katharinebonilla/Desktop/mochi/mochi.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
