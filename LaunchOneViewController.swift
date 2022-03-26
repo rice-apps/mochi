@@ -24,7 +24,7 @@ class LaunchOneViewController: UIViewController {
         view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
 
         // Do any additional setup after loading the view.
-        LaunchQOne.text = "Which TV series best describes you?"
+        LaunchQOne.text = "Which shows best describe you? Select all that apply."
         LaunchQOne.frame = CGRect(x: 32, y: 120, width: 326, height: 60)
         LaunchQOne.numberOfLines = 0
         LaunchQOne.lineBreakMode = .byWordWrapping
