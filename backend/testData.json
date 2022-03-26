@@ -6,7 +6,7 @@
        "major":"Computer Science",
        "netid":"rj",
        "interests":[
-          
+          ["Breaking Bad"]
        ]
     },
     {
@@ -16,7 +16,7 @@
        "major":"Cognitive Science",
        "netid":"yz157",
        "interests":[
-          
+          ["Black Mirror", "Arcane"]
        ]
     },
     {
@@ -26,7 +26,7 @@
        "major":"Psychology",
        "netid":"eb45",
        "interests":[
-          
+          ["The Great British Baking Show", "Brooklyn Nine-Nine"]
        ]
     },
     {
@@ -36,7 +36,7 @@
        "major":"Mechanical Engineering",
        "netid":"ea49",
        "interests":[
-          
+          ["The Great British Baking Show"]
        ]
     },
     {
@@ -46,7 +46,7 @@
        "major":"Visual and Dramatic Art",
        "netid":"mk87",
        "interests":[
-          
+          ["Arcane"]
        ]
     },
     {
@@ -56,32 +56,103 @@
        "major":"History",
        "netid":"rl193",
        "interests":[
-          
+          ["Black Mirror"]
        ]
-    }
+    },
+    {
+      "name":"Tomato Red",
+      "college":"Hanszen",
+      "year":"2025",
+      "major":"History",
+      "netid":"rt196",
+      "interests":[
+         ["The Great British Baking Show"]
+      ]
+   },
+   {
+      "name":"Pepper Green",
+      "college":"Baker",
+      "year":"2034",
+      "major":"History",
+      "netid":"gp203",
+      "interests":[
+         ["Brooklyn Nine-Nine"]
+      ]
+   },
+   {
+      "name":"Eggplant Purple",
+      "college":"Lovett",
+      "year":"2022",
+      "major":"History",
+      "netid":"pe193",
+      "interests":[
+         ["Brooklyn Nine-Nine", "Breaking Bad"]
+      ]
+   },
+   {
+      "name":"Orange Orange",
+      "college":"Will Rice",
+      "year":"2023",
+      "major":"History",
+      "netid":"oo2",
+      "interests":[
+         ["Black Mirror", "Breaking Bad"]
+      ]
+   },
+   {
+      "name":"Spinach Sap Green",
+      "college":"Duncan",
+      "year":"2023",
+      "major":"History",
+      "netid":"gs45",
+      "interests":[
+         ["Black Mirror", "Breaking Bad", "Arcane", "The Great British Baking Show"]
+      ]
+   },
+   {
+      "name":"Banana Amber",
+      "college":"Duncan",
+      "year":"2024",
+      "major":"History",
+      "netid":"ba9",
+      "interests":[
+         ["Black Mirror", "Breaking Bad", "Arcane", "The Great British Baking Show", "Brooklyn Nine-Nine"]
+      ]
+   }
  ],
 
  "events": [
+   {
+      "location":"Lilie's Lab",
+      "title":"Mochi Internal Test Launch!!!",
+      "description":"RicaApps members click here!!",
+      "timestamp":"",
+      "groupsize":"4-6",
+      "uniqueID" : "test00"
+   },
     {
        "location":"college commons",
        "title":"Weekday Lunch Social",
        "description":"Meet new ppl at Rice! Your matching result is generated based on your interest.",
        "timestamp":"",
-       "groupsize":"4-6"
+       "groupsize":"4-6",
+       "uniqueID" : "test01"
     },
     {
        "location":"college game rooms",
        "title":"Monopoly Social",
        "description":"",
        "groupsize":"4-8",
-       "timestamp":""
+       "timestamp":"",
+       "uniqueID" : "test02"
     },
     {
        "location":"Jones commons",
        "title":"COMP310 ChatApp Hackathon Night",
        "description":"Come do COMP310 chat app project together at Jones. Groupwork makes testing easier.",
        "timestamp":"",
-       "groupsize":"50"
+       "groupsize":"0-inf",
+       "uniqueID" : "test03"
     }
  ]
 }
