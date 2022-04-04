@@ -33,7 +33,7 @@
 		4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchConfirmViewController.swift; sourceTree = "<group>"; };
 		437548BB27E44EEA00E98EB7 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		437548BD27E44EF500E98EB7 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
-		439535B427AEFA8600D4E4CB /* mochiOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mochiOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		439535B427AEFA8600D4E4CB /* mochiOnboardingOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mochiOnboardingOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439535B727AEFA8600D4E4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439535B927AEFA8600D4E4CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		439535BB27AEFA8600D4E4CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 			children = (
 				4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */,
 				4368742427C1815B001F1258 /* LaunchOneViewController.swift */,
-				439535B627AEFA8600D4E4CB /* mochiFrontend */,
+				439535B627AEFA8600D4E4CB /* mochiOnboarding */,
 				439535B527AEFA8600D4E4CB /* Products */,
 				DF7FBDC36D8AA90DE8848C17 /* Pods */,
 				D4B187A5E36E9C5C755A339E /* Frameworks */,
@@ -81,12 +81,12 @@
 		439535B527AEFA8600D4E4CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				439535B427AEFA8600D4E4CB /* mochiOnboarding.app */,
+				439535B427AEFA8600D4E4CB /* mochiOnboardingOnboarding.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		439535B627AEFA8600D4E4CB /* mochiFrontend */ = {
+		439535B627AEFA8600D4E4CB /* mochiOnboarding */ = {
 			isa = PBXGroup;
 			children = (
 				43B9155027E5B4E400198211 /* Poppins-SemiBold.ttf */,
@@ -107,7 +107,7 @@
 				439535C227AEFA8800D4E4CB /* LaunchScreen.storyboard */,
 				439535C527AEFA8800D4E4CB /* Info.plist */,
 			);
-			path = mochiFrontend;
+			path = mochiOnboarding;
 			sourceTree = "<group>";
 		};
 		D4B187A5E36E9C5C755A339E /* Frameworks */ = {
@@ -130,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		439535B327AEFA8600D4E4CB /* mochiOnboarding */ = {
+		439535B327AEFA8600D4E4CB /* mochiOnboardingOnboarding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 439535C827AEFA8800D4E4CB /* Build configuration list for PBXNativeTarget "mochiOnboarding" */;
+			buildConfigurationList = 439535C827AEFA8800D4E4CB /* Build configuration list for PBXNativeTarget "mochiOnboardingOnboarding" */;
 			buildPhases = (
 				F4CAEB23BF355B191AAA1A79 /* [CP] Check Pods Manifest.lock */,
 				439535B027AEFA8600D4E4CB /* Sources */,
@@ -144,9 +144,9 @@
 			);
 			dependencies = (
 			);
-			name = mochiOnboarding;
+			name = mochiOnboardingOnboarding;
 			productName = mochiOnboarding;
-			productReference = 439535B427AEFA8600D4E4CB /* mochiOnboarding.app */;
+			productReference = 439535B427AEFA8600D4E4CB /* mochiOnboardingOnboarding.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -164,7 +164,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 439535AF27AEFA8600D4E4CB /* Build configuration list for PBXProject "mochi" */;
+			buildConfigurationList = 439535AF27AEFA8600D4E4CB /* Build configuration list for PBXProject "mochiOnboarding" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -177,7 +177,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				439535B327AEFA8600D4E4CB /* mochiOnboarding */,
+				439535B327AEFA8600D4E4CB /* mochiOnboardingOnboarding */,
 			);
 		};
 /* End PBXProject section */
@@ -457,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		439535AF27AEFA8600D4E4CB /* Build configuration list for PBXProject "mochi" */ = {
+		439535AF27AEFA8600D4E4CB /* Build configuration list for PBXProject "mochiOnboarding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				439535C627AEFA8800D4E4CB /* Debug */,
@@ -466,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		439535C827AEFA8800D4E4CB /* Build configuration list for PBXNativeTarget "mochiOnboarding" */ = {
+		439535C827AEFA8800D4E4CB /* Build configuration list for PBXNativeTarget "mochiOnboardingOnboarding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				439535C927AEFA8800D4E4CB /* Debug */,
