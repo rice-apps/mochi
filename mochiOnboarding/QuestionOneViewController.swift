@@ -9,7 +9,8 @@ import UIKit
 
 
 @IBDesignable class SelectionButton: UIButton {
-
+    var answers: [String] = []
+    
     // Allows developer to edit what colors are shown in each state
     @IBInspectable var borderColorSelected:UIColor = UIColor.black
     @IBInspectable var borderColorDeselected:UIColor = UIColor.black
@@ -43,12 +44,18 @@ import UIKit
         
         self.layer.cornerRadius = cornerRadius
         self.layer.masksToBounds = true
+        let buttonTitle = self.titleLabel?.text
         
         // Setup the Button Depending on What State it is in
         if active {
             setSelected()
+            answers.append(buttonTitle!)
         } else {
             setDeselected()
+            //delete selected button from the list
+            if let index = answers.firstIndex(of: buttonTitle!) {
+                answers.remove(at: index)
+            }
         }
         
         // Respond to touch events by user
