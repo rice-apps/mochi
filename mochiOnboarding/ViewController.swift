@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var continueButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -47,7 +48,59 @@ class ViewController: UIViewController {
         continueButton.tintColor = .white
         //continueButton.setTitle("Continue", for: .normal)
         
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let new = storyboard.instantiateViewController(withIdentifier: "ViewController")
+        let old = storyboard.instantiateViewController(withIdentifier: "ExploreViewController")
+        
+        let initialViewControllerNew = storyboard.instantiateViewController(withIdentifier: "Navigation2")
+        let initialViewControllerOld = storyboard.instantiateViewController(withIdentifier: "Navigation")
+        
+        
+//        if launchedBefore  {
+//            show(old, sender: self)
+//            //self.window?.rootViewController = initialViewControllerOld
+//            print("Not first launch.")
+//            self.navigationController?.navigationItem.hidesBackButton = true
+//
+//        } else {
+//            show(new, sender: self)
+//            //self.window?.rootViewController = initialViewControllerNew
+//            print("First launch, setting UserDefault.")
+//            UserDefaults.standard.set(true, forKey: "launchedBefore")
+//        }
     }
+    
+//    //This class’s job is to make a key for newUser in the user defaults and set it’s value
+//    class NewUserChecker{
+//      //A static incatnse of NewUserChecker which will allow to use the functions of the Core class
+//      static let shared = NewUserChecker()
+//      //checks for the key value for isNewUser.
+//      func isNewUser() -> Bool{
+//        //When the key isNewUser is first initialized,the default value is false so we need to return the opposite; true- to say that the user is a newUser
+//        return !UserDefaults.standard.bool(forKey: "isNewUser")
+//      }
+//      //The function set’s the key isNewUser to false
+//      func setIsNotNewUser(){
+//        UserDefaults.standard.set(true, forKey: "isNewUser")
+//      }
+//    }
+    
+//    override func viewDidLayoutSubviews() {
+//      super.viewDidLayoutSubviews()
+//      //Checks if user is a new user
+//      if NewUserChecker.shared.isNewUser(){
+//        //show onboarding
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "View Controller") as! ViewController
+//        //optional depending on preference of how the screen looks
+//        vc.modalPresentationStyle = .fullScreen
+//        //presents the onboarding ViewController
+//        present(vc, animated: true)
+//        //Call the function to set the value if the user is new
+//        NewUserChecker.shared.setIsNotNewUser()
+//      }
+//    }
+    
 
     @IBAction func continueButton(_ sender: Any) {
     }
