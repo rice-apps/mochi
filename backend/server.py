@@ -8,6 +8,7 @@ from flask import request
 app = Flask(__name__)
 
 from utils import auth
+from matching import matching
 
 pg_db = PostgresqlExtDatabase("postgres", user="postgres",
                               password="edmondkirsch3142", host="localhost", port=3142)
@@ -21,9 +22,11 @@ def get_JSON_from_events(events):
     for event in events:
         event_list.append(json.dumps(
             {"location": event.location,
+            "sublocations": event.sublocations,
             "description": event.description,
             "timestamp": str(event.timestamp),
             "users": event.users,
+            "groupsize": event.groupsize,
             "id": event.id
             }))
 
@@ -75,9 +78,11 @@ class User(BaseModel):
 
 class Event(BaseModel):
     location = CharField()
+    sublocations = ArrayField(CharField)
     description = TextField()
     timestamp = DateTimeField(default=datetime.datetime.now)
     users = ArrayField(CharField)
+    groupsize = CharField()
 
     def get_all_upcoming_events():
         events = (
@@ -115,12 +120,57 @@ class Event(BaseModel):
         except Exception as e:
             print(e)
             return str(None)
+    
+    def get_event_groupsize(id):
+        groupsize_str = json.loads(json.loads(Event.get_event_from_id(id))[0])["groupsize"]
+        groupsizes = groupsize_str.split("-")
+        assert len(groupsizes) <= 2
+
+        groupsizes[0] = int(groupsizes[0])
+
+        # If only one size given, assume it is lower bound
+        if len(groupsizes) == 1:
+            return (groupsizes[0], float('inf'))
+
+        if groupsizes[1] == 'inf':
+            groupsizes[1] = float('inf')
+        else:
+            groupsizes[1] = int(groupsizes[1])
+        
+        return tuple(groupsizes)
 
 class UserEvent(BaseModel):
     user = ForeignKeyField(User, backref="user_events")
     event = ForeignKeyField(Event, backref="event_users")
     location = CharField()
     group = IntegerField()
+
+    def get_users_from_user_event(event):
+        '''
+        Return a JSON array of attendees mapped to their interests
+        '''
+        attendees = dict()
+        user_events = (UserEvent.select().where(UserEvent.event == event))
+        for user_event in user_events:
+            attendees[user_event.user.netid] = user_event.user.interests
+        return json.dumps(attendees)
+    
+    def get_user_events():
+        res = []
+        user_events = (UserEvent.select())
+        for user_event in user_events:
+            res.append({
+            'netid': user_event.user.netid,
+            'eventid': user_event.event.id,
+            'location': user_event.event.location,
+            'sublocation': user_event.location,
+            'group': user_event.group
+            })
+        return str(json.dumps(res))
+
+@app.route("/hello/")
+def hello_world():
+    return "Hello, world!\n"
 
 @app.route("/create_tables/")
 def create_tables():
@@ -129,24 +179,38 @@ def create_tables():
 
     user1 = User.create(
         name="Rajesh",
-        college="brown",
+        college="Wiess",
         year="2023",
         major="Computer Science",
         netid="rj",
         interests=["Coding", "Rock Climbing"],
     )
+
+    user2 = User.create(
+        name="Taha Hasan",
+        college="Brown",
+        year="2024",
+        major="Computer Science",
+        netid="th43",
+        interests=["Chess", "Poker", "Music"],
+    )
+
     event1 = Event.create(
         location="Fondy",
+        sublocations = [],
         description="Our first event",
         timestamp=datetime.date.today() + datetime.timedelta(days=1),
         users=[user1.netid],
+        groupsize = "3-5"
     )
 
     event2 = Event.create(
         location="Brochstein",
+        sublocations = [],
         description="Our second event",
         timestamp=datetime.date.today() + datetime.timedelta(days=2),
         users=[],
+        groupsize = "2-6"
     )
 
     print("Added users and events")
@@ -154,7 +218,7 @@ def create_tables():
     UserEvent.create(user=user1, event=event1, location = "Room 100", group = 0)
 
     print("Added userEvent row\n")
-    return str(user1.id)
+    return "Done"
 
 @app.route("/<netid>/events/")
 def upcoming_events(netid):
@@ -180,6 +244,11 @@ def get_users():
 def get_user_from_netid(netid):
     user = User.get_user_from_netid(netid)
     return user
+
+@app.route("/user_events")
+def get_user_events():
+    user_events = UserEvent.get_user_events()
+    return user_events
 
 @app.route("/create_user/", methods = ["POST"])
 def create_user():
@@ -219,8 +288,8 @@ def create_event():
         print(e)
         return str(False)
 
-@app.route("/signup/<userID>/<eventID>")
-def signup_for_event(userID, eventID):
+@app.route("/signup/")
+def signup_for_event():
     '''
     Signs a user up for an event
     Inputs:
@@ -229,16 +298,21 @@ def signup_for_event(userID, eventID):
     Outputs:
         "Done" if signup successful, an error message if unsuccessful
     '''
-
+    userID = request.args.get('netid')
+    eventID = request.args.get('eventid')
+    if not userID:
+        return "Error: No user ID provided"
+    if not eventID:
+        return "Error: No event ID provided"
     try:
         user = json.loads(json.loads(User.get_user_from_netid(userID))[0])
     except:
-        return "User not found"
+        return "Error: User not found"
 
     try:
         event = json.loads(json.loads(Event.get_event_from_id(eventID))[0])
     except:
-        return "Event not found"
+        return "Error: Event not found"
     
     print("User:", user)
     print("Event:", event)
@@ -249,12 +323,14 @@ def signup_for_event(userID, eventID):
     attending.append(userID)
     Event.update({
         Event.users:attending})\
-        .where(Event.uniqueID == eventID)\
+        .where(Event.id == eventID)\
         .execute()
 
     UserEvent.create(
             user = User.get_user_from_netid(userID, False),
-            event = Event.get_event_from_id(eventID, False)
+            event = Event.get_event_from_id(eventID, False),
+            location = "",
+            group = -1
         )
     
     return "Done"
@@ -277,60 +353,68 @@ def update_interests():
     except Exception as e:
         return str(False)
 
-@app.route("/hello/")
-def hello_world():
-    return "Hello, world!\n"
-
-# @app.route("/join_event/<netid>/<eventid>/", methods=['POST'])
-# def join_events(netid, eventid):
-#     try:
-#         UserEvent.create(
-#         user = User.get_user_from_netid(netID, False),
-#         event = Event.get_event_from_id(eventid, False)
-#         )
-#     except:
-#         return False
-
-@app.route("/add_interests/<netid>/", methods=['POST', 'GET'])
-def add_interests(netid):
+@app.route("/join_event/", methods=['POST'])
+def join_events(netid, eventid):
+    '''
+    Takes a URL with param "netid" and "eventid".
+    '''
+    netid = request.args.get('netid')
+    eventid = request.args.get('eventid')
     try:
-        interest_json = request.json
-        interest_data = json.loads(interest_json)
-        interests = User.get().where(User.netid == netid).interests
-        for interest in interest_data:
-            interests.append(interest)
-        qry = User.update({User.interests:interests}).where(User.netid == netid)
-        qry.execute()
-        return True
+        UserEvent.create(
+        user = User.get_user_from_netid(netid, False),
+        event = Event.get_event_from_id(eventid, False),
+        location = "",
+        group = -1
+        )
     except:
         return False
 
-@app.route("/confirm_attendance/<netid>/<eventid>/", methods=['POST'])
-def confirm_attendancce(netid, eventid):
-    try:
-        attendance_json = request.json
-        attendance_data = json.loads(attendance_json)
-        if attendance_data == False:
-            User = User.get().where(User.netid == netid)
-            Event = Event.get().where(Event.id == eventid)
-            deletedEvent = UserEvent.get().where(UserEvent.user == User, UserEvent.event == Event)
-            qry = UserEvent.delete().where(UserEvent == deletedEvent)
-            qry.execute()
-        return True
-    except:
-        return False
+def get_attendees(eventid):
+    '''
+    Takes an eventid and returns an JSON array of users attending
+    '''
+    if eventid:
+        try:
+            attendees = []
+            event = Event.get_event_from_id(eventid, False)[0]
+            return UserEvent.get_users_from_user_event(event)
+        except:
+            return "Error: Event not found"
+    else:
+        return "Error: No event ID provided"
 
-@app.route("/get_attendance/<eventid>/", methods=['GET'])
-def get_attendance(eventid):
-    attendees = []
-    Event = Event.get().where(Event.id == eventid)
-    UserEvents = UserEvent.select().where(UserEvent.event == Event)
-    for UserEvent in UserEvents:
-        attendees
-        attendees.append({
-            'netid': UserEvent.user.netid,
-            'user': UserEvent.user.name})
-    return str(json.dumps(attendees))
+@app.route("/get_attendance/", methods=['GET'])
+def get_attendance():
+    eventid = request.args.get('eventid')
+    return get_attendees(eventid)
+
+@app.route("/run_matching/", methods = ['POST', 'GET'])
+def run_matching():
+    eventid = request.args.get('eventid')
+    attendees = json.loads(get_attendees(eventid))
+    print(attendees)
+
+    lower, upper = Event.get_event_groupsize(eventid)
+    matchings = matching(lower, upper, attendees)
+    print(matchings)
+    
+    event_data = json.loads(json.loads(Event.get_event_from_id(eventid))[0])
+    print(event_data)
+    location = event_data["location"]
+    sublocations = event_data["sublocations"]
+
+    for i in range(len(matchings)):
+        if i >= len(sublocations):
+            sublocation = location
+        else:
+            sublocation = sublocations[i]
+        for userID in matchings[i]:
+            UserEvent.update({"location":sublocation, "group":i})\
+                .where(UserEvent.user == User.get_user_from_netid(userID, False)\
+                and UserEvent.event == Event.get_event_from_id(eventid, False)).execute()
+
+    return json.dumps(matchings)
 
 @app.route("/login_profile/<netid>/", methods=['GET'])
 def login_profile(netid):
@@ -344,7 +428,4 @@ if __name__ == "__main__":
 @app.route("/login/<ticket>")
 def login(ticket):
     netid = auth.login_auth(ticket)
-    
     return auth.createToken({"netid": netid})
-    
-    
