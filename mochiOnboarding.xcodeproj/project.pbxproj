@@ -25,6 +25,9 @@
 		43EB685527C0D7DF006D786A /* QuestionThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685427C0D7DF006D786A /* QuestionThreeViewController.swift */; };
 		43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */; };
 		43EFC1BA27E6804F003D5B6B /* RegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EFC1B927E6804E003D5B6B /* RegisteredViewController.swift */; };
+		88410F6227FD3B9200E734E5 /* UpcomingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88410F6127FD3B9200E734E5 /* UpcomingPageViewController.swift */; };
+		88410F6527FD3D1E00E734E5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88410F6327FD3D1E00E734E5 /* Card.swift */; };
+		88410F6627FD3D1E00E734E5 /* CardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88410F6427FD3D1E00E734E5 /* CardView2.swift */; };
 		A6A8B31547B769ECF4D643B1 /* Pods_mochiOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40E58D55DCA75E7DA9A673C /* Pods_mochiOnboarding.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		43EB685627C0D93E006D786A /* OnboardingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConfirmationViewController.swift; sourceTree = "<group>"; };
 		43EFC1B927E6804E003D5B6B /* RegisteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewController.swift; sourceTree = "<group>"; };
 		79721BF22EFD5B47C4A0F695 /* Pods-mochiOnboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mochiOnboarding.debug.xcconfig"; path = "Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding.debug.xcconfig"; sourceTree = "<group>"; };
+		88410F6127FD3B9200E734E5 /* UpcomingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UpcomingPageViewController.swift; path = mochiOnboarding/UpcomingPageViewController.swift; sourceTree = "<group>"; };
+		88410F6327FD3D1E00E734E5 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		88410F6427FD3D1E00E734E5 /* CardView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView2.swift; sourceTree = "<group>"; };
 		A2A799DDFA8807E810E1F0CE /* Pods-mochiOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mochiOnboarding.release.xcconfig"; path = "Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding.release.xcconfig"; sourceTree = "<group>"; };
 		F40E58D55DCA75E7DA9A673C /* Pods_mochiOnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mochiOnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +75,9 @@
 		439535AB27AEFA8600D4E4CB = {
 			isa = PBXGroup;
 			children = (
+				88410F6327FD3D1E00E734E5 /* Card.swift */,
+				88410F6427FD3D1E00E734E5 /* CardView2.swift */,
+				88410F6127FD3B9200E734E5 /* UpcomingPageViewController.swift */,
 				4368742627C185B9001F1258 /* LaunchConfirmViewController.swift */,
 				4368742427C1815B001F1258 /* LaunchOneViewController.swift */,
 				439535B627AEFA8600D4E4CB /* mochiOnboarding */,
@@ -245,14 +254,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88410F6227FD3B9200E734E5 /* UpcomingPageViewController.swift in Sources */,
 				439535BC27AEFA8600D4E4CB /* ViewController.swift in Sources */,
 				4368742727C185B9001F1258 /* LaunchConfirmViewController.swift in Sources */,
 				43972E3D27CAC0A400136A0A /* ExploreViewController.swift in Sources */,
+				88410F6627FD3D1E00E734E5 /* CardView2.swift in Sources */,
 				439535B827AEFA8600D4E4CB /* AppDelegate.swift in Sources */,
 				439535BA27AEFA8600D4E4CB /* SceneDelegate.swift in Sources */,
 				43EB685527C0D7DF006D786A /* QuestionThreeViewController.swift in Sources */,
 				4368742527C1815B001F1258 /* LaunchOneViewController.swift in Sources */,
 				43EB685327C0D34B006D786A /* QuestionTwoViewController.swift in Sources */,
+				88410F6527FD3D1E00E734E5 /* Card.swift in Sources */,
 				43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */,
 				43D7F36027E660D40079F300 /* EventDetailsViewController.swift in Sources */,
 				43EFC1BA27E6804F003D5B6B /* RegisteredViewController.swift in Sources */,

@@ -2,7 +2,49 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:backend">
+   </FileRef>
+   <FileRef
+      location = "group:Brewfile">
+   </FileRef>
+   <FileRef
+      location = "group:frontend">
+   </FileRef>
+   <FileRef
+      location = "group:mochiOnboarding.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LaunchConfirmViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:LaunchOneViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:mochi">
+   </FileRef>
+   <FileRef
+      location = "group:mochiOnboarding">
+   </FileRef>
+   <FileRef
       location = "group:/Users/katharinebonilla/Desktop/mochi/mochiOnboarding.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Podfile">
+   </FileRef>
+   <FileRef
+      location = "group:Podfile.lock">
+   </FileRef>
+   <FileRef
+      location = "group:Pods">
+   </FileRef>
+   <FileRef
+      location = "group:Poppins-Medium.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:Poppins-MediumItalic.ttf">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
