@@ -289,7 +289,10 @@ def create_event():
     Creates an event and returns a boolean confirmation (as a string)
     '''
     try:
-        event_data = request.json
+        event = request.json
+
+        if "sublocations" not in event:
+            event["sublocations"] = [event["location"]]
         Event.create(
             location = event["location"],
             description = event["description"],
