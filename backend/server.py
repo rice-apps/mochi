@@ -73,8 +73,7 @@ class User(BaseModel):
             else:
                 return users
         except Exception as e:
-            print(e)
-            return str(None)
+            return "Error: User not found"
 
 class Event(BaseModel):
     location = CharField()
@@ -83,6 +82,10 @@ class Event(BaseModel):
     timestamp = DateTimeField(default=datetime.datetime.now)
     users = ArrayField(CharField)
     groupsize = CharField()
+
+    def get_all_events():
+        events = Event.select()
+        return get_JSON_from_events(events)
 
     def get_all_upcoming_events():
         events = (
@@ -119,25 +122,28 @@ class Event(BaseModel):
                 return event
         except Exception as e:
             print(e)
-            return str(None)
+            return "Error: Event not found"
     
     def get_event_groupsize(id):
-        groupsize_str = json.loads(json.loads(Event.get_event_from_id(id))[0])["groupsize"]
-        groupsizes = groupsize_str.split("-")
-        assert len(groupsizes) <= 2
+        try:
+            groupsize_str = json.loads(json.loads(Event.get_event_from_id(id))[0])["groupsize"]
+            groupsizes = groupsize_str.split("-")
+            assert len(groupsizes) <= 2
 
-        groupsizes[0] = int(groupsizes[0])
+            groupsizes[0] = int(groupsizes[0])
 
-        # If only one size given, assume it is lower bound
-        if len(groupsizes) == 1:
-            return (groupsizes[0], float('inf'))
+            # If only one size given, assume it is lower bound
+            if len(groupsizes) == 1:
+                return (groupsizes[0], float('inf'))
 
-        if groupsizes[1] == 'inf':
-            groupsizes[1] = float('inf')
-        else:
-            groupsizes[1] = int(groupsizes[1])
-        
-        return tuple(groupsizes)
+            if groupsizes[1] == 'inf':
+                groupsizes[1] = float('inf')
+            else:
+                groupsizes[1] = int(groupsizes[1])
+            
+            return tuple(groupsizes)
+        except:
+            return "Error: Event not found or groupsize formatted incorrectly"
 
 class UserEvent(BaseModel):
     user = ForeignKeyField(User, backref="user_events")
@@ -149,11 +155,14 @@ class UserEvent(BaseModel):
         '''
         Return a JSON array of attendees mapped to their interests
         '''
-        attendees = dict()
-        user_events = (UserEvent.select().where(UserEvent.event == event))
-        for user_event in user_events:
-            attendees[user_event.user.netid] = user_event.user.interests
-        return json.dumps(attendees)
+        try:
+            attendees = dict()
+            user_events = (UserEvent.select().where(UserEvent.event == event))
+            for user_event in user_events:
+                attendees[user_event.user.netid] = user_event.user.interests
+            return json.dumps(attendees)
+        except:
+            return "Error: Event not found"
     
     def get_user_events():
         res = []
@@ -229,6 +238,10 @@ def upcoming_events(netid):
 def all_upcoming_events():
     events = Event.get_all_upcoming_events()
     return events
+
+@app.route("/all_events/")
+def all_events():
+    return Event.get_all_events()
 
 @app.route("/event/<uniqueID>")
 def get_event_from_id(uniqueID):
@@ -353,23 +366,6 @@ def update_interests():
     except Exception as e:
         return str(False)
 
-@app.route("/join_event/", methods=['POST'])
-def join_events(netid, eventid):
-    '''
-    Takes a URL with param "netid" and "eventid".
-    '''
-    netid = request.args.get('netid')
-    eventid = request.args.get('eventid')
-    try:
-        UserEvent.create(
-        user = User.get_user_from_netid(netid, False),
-        event = Event.get_event_from_id(eventid, False),
-        location = "",
-        group = -1
-        )
-    except:
-        return False
-
 def get_attendees(eventid):
     '''
     Takes an eventid and returns an JSON array of users attending
@@ -392,29 +388,37 @@ def get_attendance():
 @app.route("/run_matching/", methods = ['POST', 'GET'])
 def run_matching():
     eventid = request.args.get('eventid')
-    attendees = json.loads(get_attendees(eventid))
+    if not eventid:
+        return "Error: no eventid provided"
+    try:
+        attendees = json.loads(get_attendees(eventid))
+    except:
+        return "Error: event not found"
     print(attendees)
 
-    lower, upper = Event.get_event_groupsize(eventid)
-    matchings = matching(lower, upper, attendees)
-    print(matchings)
-    
-    event_data = json.loads(json.loads(Event.get_event_from_id(eventid))[0])
-    print(event_data)
-    location = event_data["location"]
-    sublocations = event_data["sublocations"]
+    try:
+        lower, upper = Event.get_event_groupsize(eventid)
+        matchings = matching(lower, upper, attendees)
+        print(matchings)
+        
+        event_data = json.loads(json.loads(Event.get_event_from_id(eventid))[0])
+        print(event_data)
+        location = event_data["location"]
+        sublocations = event_data["sublocations"]
 
-    for i in range(len(matchings)):
-        if i >= len(sublocations):
-            sublocation = location
-        else:
-            sublocation = sublocations[i]
-        for userID in matchings[i]:
-            UserEvent.update({"location":sublocation, "group":i})\
-                .where(UserEvent.user == User.get_user_from_netid(userID, False)\
-                and UserEvent.event == Event.get_event_from_id(eventid, False)).execute()
-
-    return json.dumps(matchings)
+        for i in range(len(matchings)):
+            if i >= len(sublocations):
+                sublocation = location
+            else:
+                sublocation = sublocations[i]
+            for userID in matchings[i]:
+                UserEvent.update({"location":sublocation, "group":i})\
+                    .where(UserEvent.user == User.get_user_from_netid(userID, False)\
+                    and UserEvent.event == Event.get_event_from_id(eventid, False)).execute()
+        
+        return json.dumps(matchings)
+    except:
+        return "Eror: could not run matching algorithm"
 
 @app.route("/login_profile/<netid>/", methods=['GET'])
 def login_profile(netid):

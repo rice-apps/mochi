@@ -22,5 +22,5 @@ for user in users:
 # populates testEvents
 events = data["events"]
 for event in events:
-    event["timestamp"] = default=datetime.datetime.now()
+    event["timestamp"] = default=datetime.datetime.now() + datetime.timedelta(days=1)
     Event.create(**event)

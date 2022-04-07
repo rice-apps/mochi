@@ -26,3 +26,20 @@
 #         return True
 #     except:
 #         return False
+
+# @app.route("/join_event/", methods=['POST'])
+# def join_events(netid, eventid):
+#     '''
+#     Takes a URL with param "netid" and "eventid".
+#     '''
+#     netid = request.args.get('netid')
+#     eventid = request.args.get('eventid')
+#     try:
+#         UserEvent.create(
+#         user = User.get_user_from_netid(netid, False),
+#         event = Event.get_event_from_id(eventid, False),
+#         location = "",
+#         group = -1
+#         )
+#     except:
+#         return False
