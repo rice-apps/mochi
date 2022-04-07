@@ -294,7 +294,9 @@ def create_event():
             location = event["location"],
             description = event["description"],
             timestamp = event["timestamp"],
-            users = event["users"]
+            users = event["users"],
+            sublocations = event["sublocations"],
+            groupsize = event["groupsize"]
         )
         return str(True)
     except Exception as e:
