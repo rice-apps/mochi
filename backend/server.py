@@ -293,6 +293,8 @@ def create_event():
 
         if "sublocations" not in event:
             event["sublocations"] = [event["location"]]
+        if "users" not in event:
+            event["users"] = []
         Event.create(
             location = event["location"],
             description = event["description"],
