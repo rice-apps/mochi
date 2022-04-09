@@ -352,7 +352,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Wf5-gm-1UY" kind="relationship" relationship="viewControllers" id="CNj-MQ-eHy"/>
-                        <segue destination="g48-Yt-7yh" kind="relationship" relationship="viewControllers" id="j2O-11-sUG"/>
+                        <segue destination="Q9L-a7-l9X" kind="relationship" relationship="viewControllers" id="RhI-VN-k87"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqs-RD-S52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -663,6 +663,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eb-HZ-jka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2587" y="2613"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="p46-Ww-6bc">
+            <objects>
+                <hostingController id="Q9L-a7-l9X" customClass="EventCardVHC" customModule="mochiOnboardingOnboarding" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" id="TlH-BN-ypW"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ve4-Lc-f7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3494" y="2613"/>
         </scene>
         <!--Explore View Controller-->
         <scene sceneID="P8R-UO-dkd">
