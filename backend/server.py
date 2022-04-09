@@ -324,7 +324,8 @@ def signup_for_event():
         return "Error: No user ID provided"
     if not eventID:
         return "Error: No event ID provided"
-    if Event.get(Event.id == eventID).timestamp < datetime.date.today() + datetime.timedelta(days=1):
+    
+    if Event.get(Event.id == eventID).timestamp < datetime.datetime.now() + datetime.timedelta(days=1):
         return "Error: Cannot sign up for events within one day"
     try:
         user = json.loads(json.loads(User.get_user_from_netid(userID))[0])
