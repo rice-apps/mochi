@@ -208,7 +208,7 @@ def create_tables():
         location="Fondy",
         sublocations = [],
         description="Our first event",
-        timestamp=datetime.date.today() + datetime.timedelta(days=1),
+        timestamp=datetime.datetime.now() + datetime.timedelta(days=1),
         users=[user1.netid],
         groupsize = "3-5"
     )
@@ -217,7 +217,7 @@ def create_tables():
         location="Brochstein",
         sublocations = [],
         description="Our second event",
-        timestamp=datetime.date.today() + datetime.timedelta(days=2),
+        timestamp=datetime.datetime.now() + datetime.timedelta(days=2),
         users=[],
         groupsize = "2-6"
     )
