@@ -50,10 +50,15 @@ struct CardView2: View {
     }
 }
 
-//let vc = UIHostingController(rootView: Text("Hello World"))
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView2(card: Card.example)
+    }
+}
+
+class EventCardVHC: UIHostingController<CardView2> {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder, rootView: CardView2(card: Card.example))
     }
 }
