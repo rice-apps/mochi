@@ -19,6 +19,7 @@
 		439535C427AEFA8800D4E4CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439535C227AEFA8800D4E4CB /* LaunchScreen.storyboard */; };
 		439535CC27AF0CB100D4E4CB /* QuestionOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */; };
 		43972E3D27CAC0A400136A0A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43972E3C27CAC0A400136A0A /* ExploreViewController.swift */; };
+		439992B52801F7D1004322A9 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439992B42801F7D1004322A9 /* UpcomingViewController.swift */; };
 		43B9155127E5B4E400198211 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B9155027E5B4E400198211 /* Poppins-SemiBold.ttf */; };
 		43D7F36027E660D40079F300 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D7F35F27E660D40079F300 /* EventDetailsViewController.swift */; };
 		43EB685327C0D34B006D786A /* QuestionTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB685227C0D34B006D786A /* QuestionTwoViewController.swift */; };
@@ -43,6 +44,7 @@
 		439535C527AEFA8800D4E4CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOneViewController.swift; sourceTree = "<group>"; };
 		43972E3C27CAC0A400136A0A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		439992B42801F7D1004322A9 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		43B9155027E5B4E400198211 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		43D7F35F27E660D40079F300 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		43EB685227C0D34B006D786A /* QuestionTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTwoViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				439535BB27AEFA8600D4E4CB /* ViewController.swift */,
 				439535CB27AF0CB100D4E4CB /* QuestionOneViewController.swift */,
 				439535BD27AEFA8600D4E4CB /* Main.storyboard */,
+				439992B42801F7D1004322A9 /* UpcomingViewController.swift */,
 				43EFC1B927E6804E003D5B6B /* RegisteredViewController.swift */,
 				43D7F35F27E660D40079F300 /* EventDetailsViewController.swift */,
 				43972E3C27CAC0A400136A0A /* ExploreViewController.swift */,
@@ -256,6 +259,7 @@
 				43EB685727C0D93E006D786A /* OnboardingConfirmationViewController.swift in Sources */,
 				43D7F36027E660D40079F300 /* EventDetailsViewController.swift in Sources */,
 				43EFC1BA27E6804F003D5B6B /* RegisteredViewController.swift in Sources */,
+				439992B52801F7D1004322A9 /* UpcomingViewController.swift in Sources */,
 				439535CC27AF0CB100D4E4CB /* QuestionOneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

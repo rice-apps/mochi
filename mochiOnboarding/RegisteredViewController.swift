@@ -25,10 +25,19 @@ class RegisteredViewController: UIViewController {
         registeredLabel.numberOfLines = 0
         registeredLabel.lineBreakMode = .byWordWrapping
         
-        let firstAttributes: [NSAttributedString.Key: Any] = [ .foregroundColor: UIColor(red: 0.486, green: 0.165, blue: 0.906, alpha: 1), .font: UIFont(name: "Poppins-Medium", size: 12.0)!]
-        let firstString = NSAttributedString(string: "\(event)", attributes: firstAttributes)
+        let firstAttributes: [NSAttributedString.Key: Any] = [ .font: UIFont(name: "Poppins-SemiBold", size: 24.0)!]
+        let secondAttributes: [NSAttributedString.Key: Any] = [ .foregroundColor: UIColor(red: 0.486, green: 0.165, blue: 0.906, alpha: 1), .font: UIFont(name: "Poppins-SemiBold", size: 24.0)!]
+        let thirdAttributes: [NSAttributedString.Key: Any] = [ .font: UIFont(name: "Poppins-SemiBold", size: 24.0)!]
+
+
+        let firstString = NSMutableAttributedString(string: "You have successfully registered for ", attributes: firstAttributes)
+        let secondString = NSAttributedString(string: "\(event)", attributes: secondAttributes)
+        let thirdString = NSAttributedString(string: "!", attributes: thirdAttributes)
+
+        firstString.append(secondString)
+        firstString.append(thirdString)
+        self.registeredLabel.attributedText = firstString
         
-        //registeredLabel?.setAttributedTitle(firstString, for: [])
         
         registeredSubtitle.text = "You will receive an email once you have been paired with a group."
         registeredSubtitle.font = UIFont(name: "Poppins-Medium", size: 18)
@@ -39,7 +48,9 @@ class RegisteredViewController: UIViewController {
         continueButton.layer.backgroundColor = UIColor(red: 0.486, green: 0.165, blue: 0.906, alpha: 1).cgColor
         continueButton.layer.cornerRadius = 5
         continueButton.tintColor = .white
+
     }
+
     
 
     /*
