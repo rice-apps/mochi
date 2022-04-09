@@ -9,7 +9,7 @@ import UIKit
 
 class ExploreViewController: UIViewController {
     var actionBtn = UIButton()
-    
+
     private var card: CardHighlight = {
         //let card = CardHighlight(frame: .zero)
         let card = CardHighlight(frame: CGRect(x: 0, y: 0, width: 326, height: 202))
@@ -19,10 +19,10 @@ class ExploreViewController: UIViewController {
         card.itemTitle = "item title"
         card.itemSubtitle = "item subtitle"
         card.buttonText = "Learn More"
-        
+
         var actionButton = UIButton()
         actionButton.frame = CGRect(x: 0, y: 0, width: 154, height: 52)
-        
+
 
         return card
     }()
