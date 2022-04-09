@@ -55,7 +55,7 @@
 		79721BF22EFD5B47C4A0F695 /* Pods-mochiOnboarding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mochiOnboarding.debug.xcconfig"; path = "Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding.debug.xcconfig"; sourceTree = "<group>"; };
 		88410F6127FD3B9200E734E5 /* UpcomingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UpcomingPageViewController.swift; path = mochiOnboarding/UpcomingPageViewController.swift; sourceTree = "<group>"; };
 		88410F6327FD3D1E00E734E5 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		88410F6427FD3D1E00E734E5 /* CardView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView2.swift; sourceTree = "<group>"; };
+		88410F6427FD3D1E00E734E5 /* CardView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView2.swift; sourceTree = "<group>"; tabWidth = 4; };
 		A2A799DDFA8807E810E1F0CE /* Pods-mochiOnboarding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mochiOnboarding.release.xcconfig"; path = "Target Support Files/Pods-mochiOnboarding/Pods-mochiOnboarding.release.xcconfig"; sourceTree = "<group>"; };
 		F40E58D55DCA75E7DA9A673C /* Pods_mochiOnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mochiOnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */

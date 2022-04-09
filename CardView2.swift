@@ -19,7 +19,7 @@ struct CardView2: View {
                 .fill(.white)
                 .shadow(radius: 10)
 
-            VStack {
+            VStack(alignment: .leading) {
                 Text(card.date)
                     .font(.body)
                     .foregroundColor(.black)
@@ -37,6 +37,7 @@ struct CardView2: View {
                         .font(.body)
                         .foregroundColor(.gray)
                     }
+                
                 if(isShowingDetail) {
                     Button("Hide details") {
                         isShowingDetail.toggle()
@@ -47,6 +48,7 @@ struct CardView2: View {
                         .cornerRadius(7)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
+                
                 else {
                     Button("Show details") {
                         isShowingDetail.toggle()
@@ -57,13 +59,12 @@ struct CardView2: View {
                         .cornerRadius(7)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-                
-                
             }
             .padding()
             .multilineTextAlignment(.center)
         }
         .frame(width: 350, height: 200)
+//        .lineSpacing(30)
         .onTapGesture {
             isShowingDetail.toggle()
         }
@@ -71,12 +72,14 @@ struct CardView2: View {
 
     var body: some View {
         VStack {
-                Text("This Month")
-                    .font(.title)
-                    .padding()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                singleCard
+            Text("This Month")
+                .font(.title)
+                .padding()
+                .frame(maxWidth: 370, alignment: .leading)
+                
+            singleCard
         }
+
     }
 }
 
