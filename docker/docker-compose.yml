@@ -24,7 +24,7 @@ services:
   nginx:
     container_name: nginx
     image: nginx:stable
-    expose:
+    ports:
       - 8080:8080
     depends_on:
       - backend
