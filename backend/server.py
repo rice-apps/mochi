@@ -90,7 +90,7 @@ class Event(BaseModel):
     def get_all_upcoming_events():
         events = (
             Event.select()
-            .where(Event.timestamp > datetime.datetime.now())
+            .where(Event.timestamp > datetime.datetime.now() + datetime.timedelta(days=1))
             .order_by(Event.timestamp)
         )
         return get_JSON_from_events(events)
