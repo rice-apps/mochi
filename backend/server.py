@@ -25,6 +25,7 @@ def get_JSON_from_events(events):
             "sublocations": event.sublocations,
             "description": event.description,
             "timestamp": str(event.timestamp),
+            "deadline": str(event.deadline),
             "users": event.users,
             "groupsize": event.groupsize,
             "id": event.id
@@ -80,6 +81,7 @@ class Event(BaseModel):
     sublocations = ArrayField(CharField)
     description = TextField()
     timestamp = DateTimeField(default=datetime.datetime.now)
+    deadline = DateTimeField()
     users = ArrayField(CharField)
     groupsize = CharField()
 
@@ -90,7 +92,7 @@ class Event(BaseModel):
     def get_all_upcoming_events():
         events = (
             Event.select()
-            .where(Event.timestamp > datetime.datetime.now() + datetime.timedelta(days=1))
+            .where(Event.deadline > datetime.datetime.now())
             .order_by(Event.timestamp)
         )
         return get_JSON_from_events(events)
@@ -308,6 +310,7 @@ def create_event():
             location = event["location"],
             description = event["description"],
             timestamp = event["timestamp"],
+            deadline = event["deadline"],
             users = event["users"],
             sublocations = event["sublocations"],
             groupsize = event["groupsize"]
@@ -334,8 +337,8 @@ def signup_for_event():
     if not eventID:
         return "Error: No event ID provided"
     
-    if Event.get(Event.id == eventID).timestamp < datetime.datetime.now() + datetime.timedelta(days=1):
-        return "Error: Cannot sign up for events within one day"
+    if Event.get(Event.id == eventID).deadline < datetime.datetime.now():
+        return "Error: Cannot sign up for events after signup deadline"
     try:
         user = json.loads(json.loads(User.get_user_from_netid(userID))[0])
     except:

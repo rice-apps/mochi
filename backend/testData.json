@@ -69,7 +69,8 @@
        "timestamp":"",
        "groupsize":"4-6",
        "sublocations": [],
-       "users": []
+       "users": [],
+       "deadline": ""
     },
     {
        "location":"college game rooms",
@@ -78,7 +79,8 @@
        "groupsize":"4-8",
        "timestamp":"",
        "sublocations": [],
-       "users": []
+       "users": [],
+       "deadline": ""
     },
     {
        "location":"Jones commons",
@@ -87,7 +89,8 @@
        "timestamp":"",
        "groupsize":"0-inf",
        "sublocations": [],
-       "users": []
+       "users": [],
+       "deadline": ""
     }
  ]
 }

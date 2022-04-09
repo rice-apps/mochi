@@ -23,4 +23,5 @@ for user in users:
 events = data["events"]
 for event in events:
     event["timestamp"] = default=datetime.datetime.now() + datetime.timedelta(days=1)
+    event["deadline"] = default=datetime.datetime.now() + datetime.timedelta(days=1)
     Event.create(**event)
