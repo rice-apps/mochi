@@ -12,8 +12,8 @@ struct CardView2: View {
     let card: Card
     
     @State private var isShowingDetail = false
-
-    var body: some View {
+    
+    @ViewBuilder var singleCard: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15, style: .continuous)
                 .fill(.white)
@@ -23,20 +23,41 @@ struct CardView2: View {
                 Text(card.date)
                     .font(.body)
                     .foregroundColor(.black)
+//                    .padding()
+//                    .frame(maxWidth: .infinity, alignment: .leading)
                 Text(card.title)
                     .font(.title)
                     .foregroundColor(.black)
                 Text(card.groupStatus)
                     .font(.body)
                     .foregroundColor(.black)
-//                Button{
-//                    Text("View Detail")
-//                }
+                
                 if isShowingDetail {
                     Text(card.detail)
                         .font(.body)
                         .foregroundColor(.gray)
                     }
+                if(isShowingDetail) {
+                    Button("Hide details") {
+                        isShowingDetail.toggle()
+                    }.foregroundColor(.purple)
+                        .padding()
+                        .background(.white)
+                        .border(Color.purple, width: 3)
+                        .cornerRadius(7)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                }
+                else {
+                    Button("Show details") {
+                        isShowingDetail.toggle()
+                    }.foregroundColor(.purple)
+                        .padding()
+                        .background(.white)
+                        .border(Color.purple, width: 3)
+                        .cornerRadius(7)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                }
+                
                 
             }
             .padding()
@@ -46,7 +67,16 @@ struct CardView2: View {
         .onTapGesture {
             isShowingDetail.toggle()
         }
-//        .animation(.spring(), value: offset)
+    }
+
+    var body: some View {
+        VStack {
+                Text("This Month")
+                    .font(.title)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                singleCard
+        }
     }
 }
 
