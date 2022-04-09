@@ -94,6 +94,15 @@ class Event(BaseModel):
             .order_by(Event.timestamp)
         )
         return get_JSON_from_events(events)
+    
+    def get_events_to_match():
+        events = (
+            Event.select()
+            .where(Event.timestamp > datetime.datetime.now()
+            and Event.timestamp < datetime.datetime.now() + datetime.timedelta(days=1))
+            .order_by(Event.timestamp)
+        )
+        return events
 
     def get_events(netid):
         '''
@@ -356,7 +365,7 @@ def signup_for_event():
             group = -1
         )
     
-    return "Done"
+    return run_matching_with_id(eventID)
 
 @app.route("/update_interests/", methods = ["POST"])
 def update_interests():
@@ -395,9 +404,7 @@ def get_attendance():
     eventid = request.args.get('eventid')
     return get_attendees(eventid)
 
-@app.route("/run_matching/", methods = ['POST', 'GET'])
-def run_matching():
-    eventid = request.args.get('eventid')
+def run_matching_with_id(eventid):
     if not eventid:
         return "Error: no eventid provided"
     try:
@@ -429,6 +436,19 @@ def run_matching():
         return json.dumps(matchings)
     except:
         return "Eror: could not run matching algorithm"
+
+@app.route("/run_matching/", methods = ['POST', 'GET'])
+def run_matching():
+    eventid = request.args.get('eventid')
+    run_matching_with_id(eventid)
+    return "Done"
+
+@app.route("/run_matching_all/", methods = ['POST', 'GET'])
+def run_matching_on_all():
+    events = Event.get_events_to_match()
+    for event in events:
+        run_matching_with_id(event.id)
+    return "Done"
 
 @app.route("/login_profile/<netid>/", methods=['GET'])
 def login_profile(netid):
