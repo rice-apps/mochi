@@ -25,6 +25,7 @@ RUN apt-get update \
 
 WORKDIR ${PYSETUP_PATH}
 COPY ./backend/pyproject.toml ./
+COPY ./backend/poetry.lock ./
 RUN poetry install --no-dev
 
 FROM base AS production
